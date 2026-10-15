@@ -1,0 +1,26 @@
+s = 0.07251, r = 0.06250, lambda = 0.13501, p* = 0.5371
+
+(1) one step, N=50, g=0.4
+    E[dg]  MC 0.01854 +- 0.00008   Eq.6/exact 0.01850
+    Var[dg] MC 1.284e-03   exact KM 1.276e-03   doc Eq.7 (2B) 3.610e-02
+
+(2) autocorrelation C(n):  n  MC  theory
+      0  0.24862  0.24863
+      1  0.21496  0.21506
+      5  0.12041  0.12039
+     10  0.05829  0.05830
+     20  0.01354  0.01367
+     40  0.00072  0.00075
+    max |MC - theory| = 3.42e-04   (statistical ~ 1.8e-04)
+
+(3) step response dp_n:  n  MC  linear-response  exact-finite-step
+      1  0.001488  0.001509  0.001509
+      5  0.005729  0.005763  0.005726
+     10  0.008305  0.008554  0.008447
+     20  0.010434  0.010559  0.010354
+     40  0.010961  0.011140  0.010882
+    max |MC - linear| = 2.85e-04;  max |MC - exact finite| = 1.42e-04  (finite step ds/lam = 2.4% explains the linear-theory gap)
+
+(4) chi_step(n)/[C(0)-C(n)] (per volt), should be n-independent = ds/(dV s):
+    exact 4.4941 1/V;  analytic d ln s/dV = alpha/(exp(alpha(V-Vth))-1) = 4.5167 1/V
+    MC   n=3: 4.4816  n=10: 4.3635  n=20: 4.4384  n=40: 4.4215

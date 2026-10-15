@@ -1,0 +1,63 @@
+# presentation_style.mplstyle -- talk / slide figures.
+# Large fonts, thick lines, high contrast, sans-serif. Legible from the back row.
+# Load with: plt.style.use("assets/presentation_style.mplstyle")
+
+# ---- Figure ----
+figure.figsize      : 8.0, 5.5      # inches; fills a 16:9 content area
+figure.dpi          : 150
+savefig.dpi         : 200
+savefig.bbox        : tight
+savefig.pad_inches  : 0.05
+savefig.transparent : True          # drop onto any slide background
+figure.facecolor    : none
+
+# ---- Fonts (sans-serif reads better projected) ----
+font.family         : sans-serif
+font.sans-serif     : DejaVu Sans, Arial, Helvetica
+font.size           : 18
+axes.titlesize      : 22
+axes.labelsize      : 20
+xtick.labelsize     : 16
+ytick.labelsize     : 16
+legend.fontsize     : 16
+mathtext.fontset    : dejavusans
+
+# ---- Axes ----
+axes.linewidth      : 1.8
+axes.edgecolor      : 222222
+axes.labelcolor     : 111111
+axes.spines.top     : False
+axes.spines.right   : False
+axes.grid           : True
+grid.alpha          : 0.25
+grid.linewidth      : 0.8
+axes.axisbelow      : True
+axes.prop_cycle     : cycler('color', ['0072B2','D55E00','009E73','CC79A7','56B4E9','E69F00','000000'])
+
+# ---- Ticks ----
+xtick.direction     : out
+ytick.direction     : out
+xtick.major.size    : 6
+ytick.major.size    : 6
+xtick.major.width   : 1.8
+ytick.major.width   : 1.8
+xtick.minor.visible : False
+ytick.minor.visible : False
+
+# ---- Lines / markers ----
+lines.linewidth     : 3.0
+lines.markersize    : 9
+lines.markeredgewidth : 1.0
+
+# ---- Legend ----
+legend.frameon      : True
+legend.framealpha   : 0.85
+legend.edgecolor    : cccccc
+legend.handlelength : 1.8
+
+# ---- Images / colormap ----
+image.cmap          : viridis
+image.origin        : lower
+
+# ---- Errorbars ----
+errorbar.capsize    : 4

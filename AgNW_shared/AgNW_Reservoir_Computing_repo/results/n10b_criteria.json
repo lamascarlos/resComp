@@ -1,0 +1,1404 @@
+{
+ "windows": [
+  [
+   0.54,
+   0.02
+  ],
+  [
+   0.54,
+   0.08
+  ],
+  [
+   0.72,
+   0.02
+  ],
+  [
+   0.72,
+   0.11
+  ],
+  [
+   1.08,
+   0.03
+  ],
+  [
+   1.08,
+   0.16
+  ]
+ ],
+ "esn_total": {
+  "16": 15.398129730621227,
+  "32": 27.688909454895388,
+  "200": 50.070104509630994
+ },
+ "noise_floor": 0.024671026248828554,
+ "rows": [
+  {
+   "setting": "rupture 0/s, best window",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.02
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9999996956482068,
+    "sd": 4.4181743474490293e-07,
+    "n": 3
+   },
+   "MC": {
+    "mean": 5.810945479138913,
+    "sd": 0.3493422214205133,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 10.92570331934752,
+    "sd": 0.3473652058258249,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.3604489938005703,
+    "sd": 0.07769017657694069,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 16.73664879848643,
+    "sd": 0.6770622558114562,
+    "n": 6
+   },
+   "lags_above_floor": [
+    16,
+    16,
+    23,
+    23,
+    23,
+    22
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": true,
+   "G2": false,
+   "G2_loose": true,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0/s, bias 0.54 V",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.02
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9999996956482068,
+    "sd": 4.4181743474490293e-07,
+    "n": 3
+   },
+   "MC": {
+    "mean": 5.810945479138913,
+    "sd": 0.3493422214205133,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 10.92570331934752,
+    "sd": 0.3473652058258249,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.3604489938005703,
+    "sd": 0.07769017657694069,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 16.73664879848643,
+    "sd": 0.6770622558114562,
+    "n": 6
+   },
+   "lags_above_floor": [
+    16,
+    16,
+    23,
+    23,
+    23,
+    22
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": true,
+   "G2": false,
+   "G2_loose": true,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0/s, bias 0.72 V",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.72,
+    "v_width": 0.02
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.999999627707857,
+    "sd": 3.5454024369019143e-07,
+    "n": 3
+   },
+   "MC": {
+    "mean": 5.7525014879789405,
+    "sd": 0.42771854752424554,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 10.504008492748282,
+    "sd": 0.25191955578364617,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.3483531475012838,
+    "sd": 0.08002768503005604,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 16.256509980727223,
+    "sd": 0.4861984237493291,
+    "n": 6
+   },
+   "lags_above_floor": [
+    15,
+    15,
+    23,
+    22,
+    19,
+    19
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": true,
+   "G2": false,
+   "G2_loose": true,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0/s, bias 1.08 V",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 1.08,
+    "v_width": 0.03
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9999998263908707,
+    "sd": 2.2012560622962597e-07,
+    "n": 3
+   },
+   "MC": {
+    "mean": 5.325925037211801,
+    "sd": 0.41903278636612035,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 9.143861333183606,
+    "sd": 0.6624300234078458,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.34073312519980875,
+    "sd": 0.06206824693810759,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 14.46978637039541,
+    "sd": 1.0704352606219867,
+    "n": 6
+   },
+   "lags_above_floor": [
+    14,
+    14,
+    18,
+    19,
+    15,
+    15
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": true,
+   "G2": false,
+   "G2_loose": true,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0.001/s, best window",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.08
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9223932076768024,
+    "sd": 0.0529814998879548,
+    "n": 3
+   },
+   "MC": {
+    "mean": 2.0030360015884123,
+    "sd": 0.9686179806141649,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 3.2718477870833413,
+    "sd": 1.684831830513597,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.7081820550158736,
+    "sd": 0.33625790602266936,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9740259740259741,
+    "sd": 0.029756985032180765,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 5.274883788671754,
+    "sd": 2.594716169592582,
+    "n": 6
+   },
+   "lags_above_floor": [
+    12,
+    6,
+    5,
+    11,
+    4,
+    4
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": 0.16011941769187005,
+   "twin_collapsed": 32,
+   "twin_n": 36
+  },
+  {
+   "setting": "rupture 0.001/s, bias 0.54 V",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.08
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9223932076768024,
+    "sd": 0.0529814998879548,
+    "n": 3
+   },
+   "MC": {
+    "mean": 2.0030360015884123,
+    "sd": 0.9686179806141649,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 3.2718477870833413,
+    "sd": 1.684831830513597,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.7081820550158736,
+    "sd": 0.33625790602266936,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9740259740259741,
+    "sd": 0.029756985032180765,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 5.274883788671754,
+    "sd": 2.594716169592582,
+    "n": 6
+   },
+   "lags_above_floor": [
+    12,
+    6,
+    5,
+    11,
+    4,
+    4
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": 0.19608350386629078,
+   "twin_collapsed": 10,
+   "twin_n": 12
+  },
+  {
+   "setting": "rupture 0.001/s, bias 0.72 V",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.72,
+    "v_width": 0.11
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.8926022022364198,
+    "sd": 0.08174757202343232,
+    "n": 3
+   },
+   "MC": {
+    "mean": 2.364973779050656,
+    "sd": 0.7476149760883972,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 3.3261380224970902,
+    "sd": 1.91551879819205,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.5437016150406314,
+    "sd": 0.07448934349911969,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9848484848484849,
+    "sd": 0.01634163297677649,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 5.691111801547746,
+    "sd": 2.6444328514166004,
+    "n": 6
+   },
+   "lags_above_floor": [
+    9,
+    9,
+    7,
+    10,
+    5,
+    9
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": 0.16011941769187005,
+   "twin_collapsed": 10,
+   "twin_n": 12
+  },
+  {
+   "setting": "rupture 0.001/s, bias 1.08 V",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 1.08,
+    "v_width": 0.16
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.7525824562652325,
+    "sd": 0.08840709402241888,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.515154916045673,
+    "sd": 0.3908785230532996,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 1.66066931371628,
+    "sd": 0.8204307871587477,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.6660232686523045,
+    "sd": 0.0708842328170789,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9567099567099567,
+    "sd": 0.009918995010726954,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 3.1758242297619526,
+    "sd": 1.136611731768858,
+    "n": 6
+   },
+   "lags_above_floor": [
+    5,
+    5,
+    3,
+    5,
+    2,
+    4
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": false,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": 0.09441300625994947,
+   "twin_collapsed": 12,
+   "twin_n": 12
+  },
+  {
+   "setting": "rupture 0.01/s, best window",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.08
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.7181344741880316,
+    "sd": 0.1283194441047307,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.903395652561505,
+    "sd": 0.29040656850940605,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 1.938710192096891,
+    "sd": 0.8260114378380599,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.6384544607901077,
+    "sd": 0.055492969884062875,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9848484848484849,
+    "sd": 0.003749027722010526,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 3.8421058446583953,
+    "sd": 1.0346402720236896,
+    "n": 6
+   },
+   "lags_above_floor": [
+    6,
+    7,
+    7,
+    8,
+    8,
+    7
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": false,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": 0.10541816172479748,
+   "twin_collapsed": 36,
+   "twin_n": 36
+  },
+  {
+   "setting": "rupture 0.01/s, bias 0.54 V",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.08
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.7181344741880316,
+    "sd": 0.1283194441047307,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.903395652561505,
+    "sd": 0.29040656850940605,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 1.938710192096891,
+    "sd": 0.8260114378380599,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.6384544607901077,
+    "sd": 0.055492969884062875,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9848484848484849,
+    "sd": 0.003749027722010526,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 3.8421058446583953,
+    "sd": 1.0346402720236896,
+    "n": 6
+   },
+   "lags_above_floor": [
+    6,
+    7,
+    7,
+    8,
+    8,
+    7
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": false,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": 0.15421639499028428,
+   "twin_collapsed": 12,
+   "twin_n": 12
+  },
+  {
+   "setting": "rupture 0.01/s, bias 0.72 V",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.72,
+    "v_width": 0.11
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.5961468997712637,
+    "sd": 0.11968494461073687,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.7570068134655292,
+    "sd": 0.26363717180641577,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 1.4653958468669943,
+    "sd": 0.3698948969420913,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.6869961482189052,
+    "sd": 0.03701227431343111,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.8787878787878788,
+    "sd": 0.0780122133806931,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 3.2224026603325235,
+    "sd": 0.49407513078643306,
+    "n": 6
+   },
+   "lags_above_floor": [
+    7,
+    7,
+    6,
+    5,
+    8,
+    4
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": false,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": 0.14252904464267369,
+   "twin_collapsed": 12,
+   "twin_n": 12
+  },
+  {
+   "setting": "rupture 0.01/s, bias 1.08 V",
+   "readout_noise": "none",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 1.08,
+    "v_width": 0.16
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.37494839006696906,
+    "sd": 0.05806957468717594,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.1988458311287606,
+    "sd": 0.10781287741494527,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 0.5408680762366492,
+    "sd": 0.24976571136646641,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.8039369907511028,
+    "sd": 0.13107093532491101,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.7554112554112554,
+    "sd": 0.03203170689815748,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 1.7397139073654098,
+    "sd": 0.29941653757906195,
+    "n": 6
+   },
+   "lags_above_floor": [
+    4,
+    2,
+    3,
+    2,
+    3,
+    2
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": false,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": 0.08335937470916813,
+   "twin_collapsed": 12,
+   "twin_n": 12
+  },
+  {
+   "setting": "rupture 0/s, best window",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.08
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9964853728538782,
+    "sd": 0.005193221849249862,
+    "n": 3
+   },
+   "MC": {
+    "mean": 2.9356339125871584,
+    "sd": 0.2719586831170689,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 5.2269024693020505,
+    "sd": 0.6807721500053927,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.5662353298309598,
+    "sd": 0.08771685455720118,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9978354978354979,
+    "sd": 0.0037490277220105263,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 8.16253638188921,
+    "sd": 0.7010183903849369,
+    "n": 6
+   },
+   "lags_above_floor": [
+    11,
+    7,
+    11,
+    9,
+    9,
+    9
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0/s, bias 0.54 V",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.08
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9964853728538782,
+    "sd": 0.005193221849249862,
+    "n": 3
+   },
+   "MC": {
+    "mean": 2.9356339125871584,
+    "sd": 0.2719586831170689,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 5.2269024693020505,
+    "sd": 0.6807721500053927,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.5662353298309598,
+    "sd": 0.08771685455720118,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9978354978354979,
+    "sd": 0.0037490277220105263,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 8.16253638188921,
+    "sd": 0.7010183903849369,
+    "n": 6
+   },
+   "lags_above_floor": [
+    11,
+    7,
+    11,
+    9,
+    9,
+    9
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0/s, bias 0.72 V",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.72,
+    "v_width": 0.11
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9894436916224368,
+    "sd": 0.008288436954031149,
+    "n": 3
+   },
+   "MC": {
+    "mean": 2.54511705340602,
+    "sd": 0.36469356134024783,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 3.854072803001299,
+    "sd": 1.4517016090159698,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.6492854306128902,
+    "sd": 0.10803461857006262,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9848484848484849,
+    "sd": 0.014996110888042232,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 6.399189856407318,
+    "sd": 1.7289087506808862,
+    "n": 6
+   },
+   "lags_above_floor": [
+    4,
+    11,
+    8,
+    7,
+    8,
+    8
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0/s, bias 1.08 V",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 1.08,
+    "v_width": 0.16
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9446407773616653,
+    "sd": 0.02216560531663683,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.8359701805832411,
+    "sd": 0.13367124894983196,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 2.0699456438216184,
+    "sd": 0.8239195689092332,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.8589641536628233,
+    "sd": 0.20688786355283928,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.8593073593073592,
+    "sd": 0.07003761769421397,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 3.9059158244048593,
+    "sd": 0.8504823338415426,
+    "n": 6
+   },
+   "lags_above_floor": [
+    2,
+    3,
+    2,
+    3,
+    3,
+    4
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0.001/s, best window",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.08
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9195973531947438,
+    "sd": 0.05597415497035895,
+    "n": 3
+   },
+   "MC": {
+    "mean": 2.1415038817115613,
+    "sd": 0.6291295782628625,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 3.193318946498815,
+    "sd": 1.4971061899455673,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.6732274312787769,
+    "sd": 0.1913619547179555,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9783549783549783,
+    "sd": 0.02087370294587219,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 5.334822828210375,
+    "sd": 2.0620583129497696,
+    "n": 6
+   },
+   "lags_above_floor": [
+    7,
+    6,
+    8,
+    11,
+    7,
+    8
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0.001/s, bias 0.54 V",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.08
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.9195973531947438,
+    "sd": 0.05597415497035895,
+    "n": 3
+   },
+   "MC": {
+    "mean": 2.1415038817115613,
+    "sd": 0.6291295782628625,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 3.193318946498815,
+    "sd": 1.4971061899455673,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.6732274312787769,
+    "sd": 0.1913619547179555,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9783549783549783,
+    "sd": 0.02087370294587219,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 5.334822828210375,
+    "sd": 2.0620583129497696,
+    "n": 6
+   },
+   "lags_above_floor": [
+    7,
+    6,
+    8,
+    11,
+    7,
+    8
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0.001/s, bias 0.72 V",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.72,
+    "v_width": 0.11
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.8843023389389316,
+    "sd": 0.08206170717284206,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.9339743381446686,
+    "sd": 0.5243993121765317,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 1.9930659492360394,
+    "sd": 1.4248814738637292,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.6640190768292059,
+    "sd": 0.07693840080592018,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9675324675324676,
+    "sd": 0.017180203318601265,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 3.9270402873807075,
+    "sd": 1.7533155333167458,
+    "n": 6
+   },
+   "lags_above_floor": [
+    8,
+    8,
+    6,
+    2,
+    7,
+    7
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": true,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0.001/s, bias 1.08 V",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 1.08,
+    "v_width": 0.16
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.7429313441413582,
+    "sd": 0.08883300910223885,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.4666197316363538,
+    "sd": 0.22315060180680432,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 1.1783497965202252,
+    "sd": 0.7366382155474008,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.785516877701765,
+    "sd": 0.20234705247916865,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.683982683982684,
+    "sd": 0.18507442825199738,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 2.644969528156579,
+    "sd": 0.9543516690275462,
+    "n": 6
+   },
+   "lags_above_floor": [
+    5,
+    3,
+    4,
+    4,
+    2,
+    3
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": false,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0.01/s, best window",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.08
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.7181500750416688,
+    "sd": 0.1281937854257856,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.8892506179972826,
+    "sd": 0.29946880469176335,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 1.8518857403516804,
+    "sd": 0.5826679640871099,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.6297601999780654,
+    "sd": 0.053633433013721234,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9805194805194805,
+    "sd": 0.011247083166031643,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 3.7411363583489625,
+    "sd": 0.803891223523522,
+    "n": 6
+   },
+   "lags_above_floor": [
+    6,
+    7,
+    7,
+    8,
+    8,
+    7
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": false,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0.01/s, bias 0.54 V",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.54,
+    "v_width": 0.08
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.7181500750416688,
+    "sd": 0.1281937854257856,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.8892506179972826,
+    "sd": 0.29946880469176335,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 1.8518857403516804,
+    "sd": 0.5826679640871099,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.6297601999780654,
+    "sd": 0.053633433013721234,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.9805194805194805,
+    "sd": 0.011247083166031643,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 3.7411363583489625,
+    "sd": 0.803891223523522,
+    "n": 6
+   },
+   "lags_above_floor": [
+    6,
+    7,
+    7,
+    8,
+    8,
+    7
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": false,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0.01/s, bias 0.72 V",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 0.72,
+    "v_width": 0.11
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.5956861151512073,
+    "sd": 0.11990111257017058,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.6945212806956758,
+    "sd": 0.2732086414724472,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 1.24677345611003,
+    "sd": 0.27306006061726606,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.698658099898124,
+    "sd": 0.06970243307938825,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.7900432900432901,
+    "sd": 0.18010947240445643,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 2.941294736805706,
+    "sd": 0.4246693260905732,
+    "n": 6
+   },
+   "lags_above_floor": [
+    6,
+    8,
+    6,
+    5,
+    7,
+    4
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": false,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  },
+  {
+   "setting": "rupture 0.01/s, bias 1.08 V",
+   "readout_noise": "measured x1",
+   "operating_point": {
+    "hold": 100,
+    "v_center": 1.08,
+    "v_width": 0.16
+   },
+   "selected_on": "validation (val_MC + val_IPC2)",
+   "consistency_inc": {
+    "mean": 0.3729142873987266,
+    "sd": 0.056932597000934955,
+    "n": 3
+   },
+   "MC": {
+    "mean": 1.0213743943244789,
+    "sd": 0.0840633868311932,
+    "n": 6
+   },
+   "IPC2": {
+    "mean": 0.37613317410850183,
+    "sd": 0.2589336021594384,
+    "n": 6
+   },
+   "narma10_nmse": {
+    "mean": 0.7927272271942373,
+    "sd": 0.07756249016507123,
+    "n": 6
+   },
+   "accuracy": {
+    "mean": 0.6969696969696969,
+    "sd": 0.09121778140998045,
+    "n": 3
+   },
+   "total_capacity": {
+    "mean": 1.3975075684329807,
+    "sd": 0.27353713922364475,
+    "n": 6
+   },
+   "lags_above_floor": [
+    3,
+    3,
+    3,
+    1,
+    3,
+    2
+   ],
+   "esn_units": 200,
+   "esn_total": 50.070104509630994,
+   "G0": false,
+   "G1": false,
+   "G2": false,
+   "G2_loose": false,
+   "twin_ratio_median": null,
+   "twin_collapsed": null,
+   "twin_n": 0
+  }
+ ]
+}

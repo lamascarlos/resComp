@@ -1,0 +1,27 @@
+{
+ "1": {
+  "onset_V": 0.345,
+  "n_junctions": 5953,
+  "pad_wires_mean": 14.0
+ },
+ "1.41": {
+  "onset_V": 0.585,
+  "n_junctions": 11966,
+  "pad_wires_mean": 21.1875
+ },
+ "2": {
+  "onset_V": 0.807,
+  "n_junctions": 24447,
+  "pad_wires_mean": 37.1875
+ },
+ "2.83": {
+  "onset_V": 1.119,
+  "n_junctions": 49567,
+  "pad_wires_mean": 65.8125
+ },
+ "4": {
+  "onset_V": 1.743,
+  "n_junctions": 99220,
+  "pad_wires_mean": 114.375
+ }
+}

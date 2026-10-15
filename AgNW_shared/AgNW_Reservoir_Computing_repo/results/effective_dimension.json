@@ -1,0 +1,82 @@
+{
+ "stochastic E1 (hold 30, 1.75 V)": {
+  "current": {
+   "n_features": 10,
+   "PR": 1.0013647442377682,
+   "PR_state": 1.06437563271981
+  },
+  "probes": {
+   "n_features": 32,
+   "PR": 1.2293940729398933,
+   "PR_state": 15.163215795370347
+  },
+  "junctions": {
+   "n_features": 5953,
+   "PR": 14.338339240955838,
+   "PR_state": 14.338339240955838
+  }
+ },
+ "stochastic E3 (hold 1000, 1.75 V)": {
+  "current": {
+   "n_features": 10,
+   "PR": 1.0103937730770827,
+   "PR_state": 1.3151445790621346
+  },
+  "probes": {
+   "n_features": 32,
+   "PR": 1.257683281271775,
+   "PR_state": 19.65524340551891
+  },
+  "junctions": {
+   "n_features": 5953,
+   "PR": 92.52422973710483,
+   "PR_state": 92.52422973710483
+  }
+ },
+ "mean-field M1 (hold 30, 5.5 V)": {
+  "current": {
+   "n_features": 10,
+   "PR": 1.0001619372490607,
+   "PR_state": 1.0381072442309527
+  },
+  "probes": {
+   "n_features": 32,
+   "PR": 1.0074328480716241,
+   "PR_state": 4.73194730409382
+  },
+  "junctions": {
+   "n_features": 5953,
+   "PR": 3.607582080805463,
+   "PR_state": 3.607582080805463
+  }
+ },
+ "mean-field N2 log-unif. 1e-4..1e-1 (hold 30, 5.5 V)": {
+  "current": {
+   "n_features": 10,
+   "PR": 1.0194052277756485,
+   "PR_state": 1.281814755997336
+  },
+  "probes": {
+   "n_features": 32,
+   "PR": 1.0113706552912856,
+   "PR_state": 3.82464859720971
+  },
+  "junctions": {
+   "n_features": 5953,
+   "PR": 4.577328468163138,
+   "PR_state": 4.577328468163138
+  }
+ },
+ "ESN 32 units (rho 0.9, sigma 0.5)": {
+  "states": {
+   "n_features": 32,
+   "PR": 3.2751815901123726
+  }
+ },
+ "ESN 200 units (rho 0.9, sigma 0.5)": {
+  "states": {
+   "n_features": 200,
+   "PR": 4.331939493710335
+  }
+ }
+}

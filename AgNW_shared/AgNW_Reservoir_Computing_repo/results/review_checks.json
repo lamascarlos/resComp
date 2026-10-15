@@ -1,0 +1,423 @@
+{
+ "cases": {
+  "binary stochastic (E1, 1.25-2.25 V)": {
+   "per_seed": {
+    "1": {
+     "current": {
+      "consistency_raw": 0.8472362279294293,
+      "consistency_increments": 0.13834284195084698,
+      "consistency_highpass": 0.27732840790089164,
+      "trend_share": 0.7828587745057021,
+      "input_explained_R2": 0.07142161245065497
+     },
+     "probes": {
+      "consistency_raw": -0.006642348718973346,
+      "consistency_increments": 0.0026476974075108567,
+      "consistency_highpass": -0.0011027055086382826,
+      "trend_share": 0.13617523847468135,
+      "input_explained_R2": 0.01934774835641351
+     },
+     "junctions": {
+      "consistency_raw": 0.01230769152240081,
+      "consistency_increments": -0.00025833267866604004,
+      "consistency_highpass": 0.00040358641269011607,
+      "trend_share": 0.3852865048000048,
+      "input_explained_R2": 0.01294850384000231
+     },
+     "on_fraction_first20": 0.24777591130522425,
+     "on_fraction_last20": 0.26788174029900896,
+     "alpha_hits_junctions": {
+      "at_min": 0.0,
+      "at_max": 1.0
+     }
+    },
+    "2": {
+     "current": {
+      "consistency_raw": 0.7924629399744448,
+      "consistency_increments": 0.10320932985660902,
+      "consistency_highpass": 0.274100390317125,
+      "trend_share": 0.7695372848056521,
+      "input_explained_R2": 0.14292197935113965
+     },
+     "probes": {
+      "consistency_raw": -0.014380972293500435,
+      "consistency_increments": -0.0035668451341407358,
+      "consistency_highpass": 0.007760254525062063,
+      "trend_share": 0.1941602305437341,
+      "input_explained_R2": 0.01645510827569299
+     },
+     "junctions": {
+      "consistency_raw": 0.006976502959958096,
+      "consistency_increments": 0.00042401403725165425,
+      "consistency_highpass": 0.0003585814004898038,
+      "trend_share": 0.390068397321733,
+      "input_explained_R2": 0.02033306892409706
+     },
+     "on_fraction_first20": 0.2270592895263509,
+     "on_fraction_last20": 0.24610615410273515
+    },
+    "3": {
+     "current": {
+      "consistency_raw": 0.7556218093230834,
+      "consistency_increments": 0.08021444281192666,
+      "consistency_highpass": 0.22399983770731763,
+      "trend_share": 0.6617472117561891,
+      "input_explained_R2": 0.04391607022806796
+     },
+     "probes": {
+      "consistency_raw": -0.04421608210344287,
+      "consistency_increments": -0.004500251201478588,
+      "consistency_highpass": -0.0051432448193813336,
+      "trend_share": 0.1933400532188916,
+      "input_explained_R2": 0.01391371798112869
+     },
+     "junctions": {
+      "consistency_raw": 0.016610507657424136,
+      "consistency_increments": 0.0003636671494130847,
+      "consistency_highpass": 0.0004506313477930912,
+      "trend_share": 0.3907937988069469,
+      "input_explained_R2": 0.010437656563358376
+     },
+     "on_fraction_first20": 0.22453787497905142,
+     "on_fraction_last20": 0.23708228590581534
+    }
+   }
+  },
+  "mean-field (M1, 5.0-6.0 V)": {
+   "per_seed": {
+    "1": {
+     "current": {
+      "consistency_raw": 0.9997748887497947,
+      "consistency_increments": 0.9999843449901678,
+      "consistency_highpass": 0.9999792577661986,
+      "trend_share": 0.06897356525281234,
+      "input_explained_R2": 0.683487764738491
+     },
+     "probes": {
+      "consistency_raw": 0.8483185619360536,
+      "consistency_increments": 0.9001481620609537,
+      "consistency_highpass": 0.8917441860292861,
+      "trend_share": 0.344140237433516,
+      "input_explained_R2": 0.3180383170390382
+     },
+     "junctions": {
+      "consistency_raw": 0.8756221227161435,
+      "consistency_increments": 0.8258227062217,
+      "consistency_highpass": 0.8261771085195584,
+      "trend_share": 0.48562961467375726,
+      "input_explained_R2": 0.2876975650623863
+     },
+     "on_fraction_first20": 0.23909923412305012,
+     "on_fraction_last20": 0.23576205561827077,
+     "alpha_hits_junctions": {
+      "at_min": 0.0,
+      "at_max": 0.8387096774193549
+     }
+    },
+    "2": {
+     "current": {
+      "consistency_raw": 0.9999075340579923,
+      "consistency_increments": 0.9999863299164142,
+      "consistency_highpass": 0.9999856822988624,
+      "trend_share": 0.05907062499764722,
+      "input_explained_R2": 0.6177397193061858
+     },
+     "probes": {
+      "consistency_raw": 0.8486099129581721,
+      "consistency_increments": 0.8632007164533231,
+      "consistency_highpass": 0.8592922877271304,
+      "trend_share": 0.2430202237726568,
+      "input_explained_R2": 0.3745234906950892
+     },
+     "junctions": {
+      "consistency_raw": 0.9161965955645383,
+      "consistency_increments": 0.855912520779085,
+      "consistency_highpass": 0.8548036433463289,
+      "trend_share": 0.5461355092918493,
+      "input_explained_R2": 0.25977124356420583
+     },
+     "on_fraction_first20": 0.21466826133981715,
+     "on_fraction_last20": 0.2110908268986045
+    },
+    "3": {
+     "current": {
+      "consistency_raw": 0.9998637743967784,
+      "consistency_increments": 0.9999761379983243,
+      "consistency_highpass": 0.9999784386286381,
+      "trend_share": 0.08812340584250972,
+      "input_explained_R2": 0.5748853734120938
+     },
+     "probes": {
+      "consistency_raw": 0.786616853387565,
+      "consistency_increments": 0.8956547938083556,
+      "consistency_highpass": 0.8737892346804818,
+      "trend_share": 0.1707328490983173,
+      "input_explained_R2": 0.2808863006223631
+     },
+     "junctions": {
+      "consistency_raw": 0.8507490284740349,
+      "consistency_increments": 0.7970869479685894,
+      "consistency_highpass": 0.7971499428951764,
+      "trend_share": 0.49575809669046267,
+      "input_explained_R2": 0.24630302364413226
+     },
+     "on_fraction_first20": 0.20150036150955747,
+     "on_fraction_last20": 0.1976356324865148
+    }
+   }
+  },
+  "continuous filament (N4-1, 1.75-2.75 V)": {
+   "per_seed": {
+    "1": {
+     "current": {
+      "consistency_raw": 0.9964871081391582,
+      "consistency_increments": 0.9946761089710566,
+      "consistency_highpass": 0.987415085058951,
+      "trend_share": 0.9269779368572726,
+      "input_explained_R2": 0.0018483162699826083
+     },
+     "probes": {
+      "consistency_raw": 0.41824924525153406,
+      "consistency_increments": 0.41039374878622653,
+      "consistency_highpass": 0.33301744689546464,
+      "trend_share": 0.7592058317626701,
+      "input_explained_R2": 0.004563057776326121
+     },
+     "junctions": {
+      "consistency_raw": 0.9041139254259718,
+      "consistency_increments": 0.7603551985128092,
+      "consistency_highpass": 0.72323312770775,
+      "trend_share": 0.8733216502152019,
+      "input_explained_R2": 0.003913341758704299
+     },
+     "on_fraction_first20": 0.11620569460776078,
+     "on_fraction_last20": 0.11607592810347725,
+     "alpha_hits_junctions": {
+      "at_min": 0.0,
+      "at_max": 0.7419354838709677
+     }
+    },
+    "2": {
+     "current": {
+      "consistency_raw": 0.989890921932696,
+      "consistency_increments": 0.9881171528841362,
+      "consistency_highpass": 0.9782081254780268,
+      "trend_share": 0.9691533483801432,
+      "input_explained_R2": 0.024986730737419256
+     },
+     "probes": {
+      "consistency_raw": 0.5269421701346255,
+      "consistency_increments": 0.541669736925873,
+      "consistency_highpass": 0.4797663150848945,
+      "trend_share": 0.747396876491728,
+      "input_explained_R2": 0.03087213769801366
+     },
+     "junctions": {
+      "consistency_raw": 0.9069071032199413,
+      "consistency_increments": 0.7600903972231959,
+      "consistency_highpass": 0.7166815774809482,
+      "trend_share": 0.8781780897636396,
+      "input_explained_R2": 0.02634396567814978
+     },
+     "on_fraction_first20": 0.09525016677785189,
+     "on_fraction_last20": 0.09500958972648432
+    },
+    "3": {
+     "current": {
+      "consistency_raw": 0.9887730797827453,
+      "consistency_increments": 0.9859556191481907,
+      "consistency_highpass": 0.9707878701513462,
+      "trend_share": 0.9567455211064173,
+      "input_explained_R2": 0.005400239237774951
+     },
+     "probes": {
+      "consistency_raw": 0.5598428516899611,
+      "consistency_increments": 0.545853883455496,
+      "consistency_highpass": 0.520817725567934,
+      "trend_share": 0.7723842877493167,
+      "input_explained_R2": 0.005429170419524946
+     },
+     "junctions": {
+      "consistency_raw": 0.9020654478024387,
+      "consistency_increments": 0.7452933677072768,
+      "consistency_highpass": 0.7034932503515636,
+      "trend_share": 0.871121879559672,
+      "input_explained_R2": 0.00655218300125867
+     },
+     "on_fraction_first20": 0.09382604323780797,
+     "on_fraction_last20": 0.09317915200268143
+    }
+   }
+  },
+  "binary stochastic, pads (N5a, 0-1 V)": {
+   "per_seed": {
+    "1": {
+     "current": {
+      "consistency_raw": 0.25121026231336363,
+      "consistency_increments": 0.0909365480197479,
+      "consistency_highpass": 0.09786585675250876,
+      "trend_share": 0.26761057136768324,
+      "input_explained_R2": 0.05181495832106262
+     },
+     "probes": {
+      "consistency_raw": 0.01796321686306713,
+      "consistency_increments": 0.016960385182715136,
+      "consistency_highpass": 0.009166875359279236,
+      "trend_share": 0.1371255312971108,
+      "input_explained_R2": 0.014672160802712927
+     },
+     "junctions": {
+      "consistency_raw": -0.0032325687951393852,
+      "consistency_increments": 0.0020116461618854393,
+      "consistency_highpass": -0.001476225894454489,
+      "trend_share": 0.3364530961465239,
+      "input_explained_R2": 0.01326377405619031
+     },
+     "on_fraction_first20": 0.2874781622711238,
+     "on_fraction_last20": 0.30139131530320845,
+     "alpha_hits_junctions": {
+      "at_min": 0.0,
+      "at_max": 0.967741935483871
+     }
+    },
+    "2": {
+     "current": {
+      "consistency_raw": 0.26707266635157123,
+      "consistency_increments": 0.10160777318315695,
+      "consistency_highpass": 0.09579523940471935,
+      "trend_share": 0.24614014128181738,
+      "input_explained_R2": 0.04891278914093304
+     },
+     "probes": {
+      "consistency_raw": -0.031134743284558106,
+      "consistency_increments": -0.01937060763735148,
+      "consistency_highpass": -0.018614100643564023,
+      "trend_share": 0.13471598891795103,
+      "input_explained_R2": 0.023648931527892082
+     },
+     "junctions": {
+      "consistency_raw": 0.006661121032768052,
+      "consistency_increments": 0.0010987524863785567,
+      "consistency_highpass": -0.0006014367602135045,
+      "trend_share": 0.3239626696222859,
+      "input_explained_R2": 0.02017829053337134
+     },
+     "on_fraction_first20": 0.2829853235490327,
+     "on_fraction_last20": 0.30377293195463645
+    },
+    "3": {
+     "current": {
+      "consistency_raw": 0.28221066260460353,
+      "consistency_increments": 0.06902581957208605,
+      "consistency_highpass": 0.0655745608950387,
+      "trend_share": 0.35551239640198506,
+      "input_explained_R2": 0.030258180799185286
+     },
+     "probes": {
+      "consistency_raw": 0.00718295047628061,
+      "consistency_increments": -0.010832139504134471,
+      "consistency_highpass": -0.018019426101657382,
+      "trend_share": 0.10711756132651216,
+      "input_explained_R2": 0.012805981672886997
+     },
+     "junctions": {
+      "consistency_raw": 0.0068011427124043105,
+      "consistency_increments": 0.0007441081515555955,
+      "consistency_highpass": -2.1618548503681865e-05,
+      "trend_share": 0.3477341430973818,
+      "input_explained_R2": 0.011464837133826412
+     },
+     "on_fraction_first20": 0.22937238143120495,
+     "on_fraction_last20": 0.25250335176805766
+    }
+   }
+  }
+ },
+ "leaky_bank": {
+  "K=32, SNR=0, alphas=default": {
+   "MC": 5.679905313879353,
+   "lag0": 0.9996834632624216,
+   "alpha_at_min": 1.0
+  },
+  "K=32, SNR=0, alphas=wide": {
+   "MC": 8.271380999787057,
+   "lag0": 0.9999958286382559,
+   "alpha_at_min": 0.967741935483871
+  },
+  "K=32, SNR=1e+08, alphas=default": {
+   "MC": 4.824287899687101,
+   "lag0": 0.9989355661931104,
+   "alpha_at_min": 0.12903225806451613
+  },
+  "K=32, SNR=1e+08, alphas=wide": {
+   "MC": 4.824032357617344,
+   "lag0": 0.9989355661931104,
+   "alpha_at_min": 0.03225806451612903
+  },
+  "K=32, SNR=10000, alphas=default": {
+   "MC": 2.729502780105212,
+   "lag0": 0.9826048206091159,
+   "alpha_at_min": 0.0
+  },
+  "K=32, SNR=10000, alphas=wide": {
+   "MC": 2.729502780105212,
+   "lag0": 0.9826048206091159,
+   "alpha_at_min": 0.0
+  },
+  "K=32, SNR=100, alphas=default": {
+   "MC": 1.5848347448781204,
+   "lag0": 0.9132811220179748,
+   "alpha_at_min": 0.03225806451612903
+  },
+  "K=32, SNR=100, alphas=wide": {
+   "MC": 1.5848347416776303,
+   "lag0": 0.9132811220179748,
+   "alpha_at_min": 0.0
+  },
+  "K=200, SNR=0, alphas=default": {
+   "MC": 6.009002650138345,
+   "lag0": 0.9998082056963481,
+   "alpha_at_min": 1.0
+  },
+  "K=200, SNR=0, alphas=wide": {
+   "MC": 9.006612309492613,
+   "lag0": 0.9999993239202436,
+   "alpha_at_min": 0.967741935483871
+  },
+  "K=200, SNR=1e+08, alphas=default": {
+   "MC": 5.014397898920663,
+   "lag0": 0.9992849403826575,
+   "alpha_at_min": 0.0
+  },
+  "K=200, SNR=1e+08, alphas=wide": {
+   "MC": 5.014397898920663,
+   "lag0": 0.9992849403826575,
+   "alpha_at_min": 0.0
+  },
+  "K=200, SNR=10000, alphas=default": {
+   "MC": 3.047891674011417,
+   "lag0": 0.9888848489447161,
+   "alpha_at_min": 0.0
+  },
+  "K=200, SNR=10000, alphas=wide": {
+   "MC": 3.047891674011417,
+   "lag0": 0.9888848489447161,
+   "alpha_at_min": 0.0
+  },
+  "K=200, SNR=100, alphas=default": {
+   "MC": 2.068074145764826,
+   "lag0": 0.9526871967545334,
+   "alpha_at_min": 0.0
+  },
+  "K=200, SNR=100, alphas=wide": {
+   "MC": 2.068074145764826,
+   "lag0": 0.9526871967545334,
+   "alpha_at_min": 0.0
+  }
+ },
+ "noise_floor_highdim": {
+  "32": 0.00591904879995675,
+  "1000": 0.0,
+  "6000": 0.005884020141260438
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "1": {
+  "onset_V": 2.08,
+  "G_start_S": 1.387734351043779e-09,
+  "n_junctions": 5953,
+  "segment_wires_mean": 17.25,
+  "ramp_V_per_s": 0.5
+ },
+ "2": {
+  "onset_V": 3.95,
+  "G_start_S": 1.330123337861533e-09,
+  "n_junctions": 24447,
+  "segment_wires_mean": 60.0625,
+  "ramp_V_per_s": 0.5
+ },
+ "2.83": {
+  "onset_V": 5.51,
+  "G_start_S": 1.348717429405788e-09,
+  "n_junctions": 49567,
+  "segment_wires_mean": 113.125,
+  "ramp_V_per_s": 0.5
+ }
+}

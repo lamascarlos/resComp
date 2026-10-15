@@ -1,0 +1,338 @@
+{
+ "noise_floor": 0.024671026248828554,
+ "esn_total": {
+  "16": 15.398129730621227,
+  "32": 27.688909454895388,
+  "200": 50.070104509630994
+ },
+ "layouts": {
+  "pads": {
+   "electrodes": {
+    "operating_point": {
+     "hold": 100,
+     "v_center": 0.45
+    },
+    "selected_on": "validation (val_MC + val_IPC2)",
+    "consistency_inc": {
+     "mean": 0.9999991912692666,
+     "sd": 5.492839360030112e-07,
+     "n": 3
+    },
+    "MC": {
+     "mean": 3.4798087112423297,
+     "sd": 0.6622895294672835,
+     "n": 6
+    },
+    "IPC2": {
+     "mean": 6.741867047421756,
+     "sd": 1.1764487091467486,
+     "n": 6
+    },
+    "narma10_nmse": {
+     "mean": 0.40123728451956103,
+     "sd": 0.07192373167362161,
+     "n": 6
+    },
+    "accuracy": {
+     "mean": 1.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "total_capacity": {
+     "mean": 10.221675758664086,
+     "sd": 1.8282755868463034,
+     "n": 6
+    },
+    "lags_above_floor": [
+     11,
+     11,
+     14,
+     14,
+     18,
+     18
+    ],
+    "esn_units": 200,
+    "esn_total": 50.070104509630994,
+    "G0": true,
+    "G1": true,
+    "G2": false,
+    "n_features": 800,
+    "G2_loose": true,
+    "esn_units_loose": 16,
+    "esn_total_loose": 15.398129730621227
+   },
+   "current": {
+    "operating_point": {
+     "hold": 100,
+     "v_center": 0.45
+    },
+    "selected_on": "validation (val_MC + val_IPC2)",
+    "consistency_inc": {
+     "mean": 0.9999991912692666,
+     "sd": 5.492839360030112e-07,
+     "n": 3
+    },
+    "MC": {
+     "mean": 3.4798087112423297,
+     "sd": 0.6622895294672835,
+     "n": 6
+    },
+    "IPC2": {
+     "mean": 6.741867047421756,
+     "sd": 1.1764487091467486,
+     "n": 6
+    },
+    "narma10_nmse": {
+     "mean": 0.40123728451956103,
+     "sd": 0.07192373167362161,
+     "n": 6
+    },
+    "accuracy": {
+     "mean": 1.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "total_capacity": {
+     "mean": 10.221675758664086,
+     "sd": 1.8282755868463034,
+     "n": 6
+    },
+    "lags_above_floor": [
+     11,
+     11,
+     14,
+     14,
+     18,
+     18
+    ],
+    "esn_units": 200,
+    "esn_total": 50.070104509630994,
+    "G0": true,
+    "G1": true,
+    "G2": false,
+    "n_features": 800,
+    "G2_loose": true,
+    "esn_units_loose": 16,
+    "esn_total_loose": 15.398129730621227
+   },
+   "probes": {
+    "operating_point": {
+     "hold": 100,
+     "v_center": 0.45
+    },
+    "selected_on": "validation (val_MC + val_IPC2)",
+    "consistency_inc": {
+     "mean": 0.9999016817244716,
+     "sd": 7.309451152929574e-05,
+     "n": 3
+    },
+    "MC": {
+     "mean": 2.9597679529697145,
+     "sd": 0.14086352339594777,
+     "n": 6
+    },
+    "IPC2": {
+     "mean": 5.106162461960463,
+     "sd": 0.6061592120046165,
+     "n": 6
+    },
+    "narma10_nmse": {
+     "mean": 0.39741285500156387,
+     "sd": 0.06929127293117349,
+     "n": 6
+    },
+    "accuracy": {
+     "mean": 1.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "total_capacity": {
+     "mean": 8.065930414930177,
+     "sd": 0.7331690254436931,
+     "n": 6
+    },
+    "lags_above_floor": [
+     13,
+     14,
+     16,
+     16,
+     17,
+     17
+    ],
+    "esn_units": 32,
+    "esn_total": 27.688909454895388,
+    "G0": true,
+    "G1": true,
+    "G2": false,
+    "n_features": 32,
+    "G2_loose": false,
+    "esn_units_loose": 32,
+    "esn_total_loose": 27.688909454895388
+   }
+  },
+  "pads_float": {
+   "electrodes": {
+    "operating_point": {
+     "hold": 100,
+     "v_center": 0.91
+    },
+    "selected_on": "validation (val_MC + val_IPC2)",
+    "consistency_inc": {
+     "mean": 0.9999422453583229,
+     "sd": 5.165212272355597e-05,
+     "n": 3
+    },
+    "MC": {
+     "mean": 2.935997337765676,
+     "sd": 0.3930464387877443,
+     "n": 6
+    },
+    "IPC2": {
+     "mean": 6.004885560838275,
+     "sd": 0.29202274782489784,
+     "n": 6
+    },
+    "narma10_nmse": {
+     "mean": 0.4845141412111265,
+     "sd": 0.07167465970373384,
+     "n": 6
+    },
+    "accuracy": {
+     "mean": 1.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "total_capacity": {
+     "mean": 8.94088289860395,
+     "sd": 0.6724798739593936,
+     "n": 6
+    },
+    "lags_above_floor": [
+     11,
+     11,
+     11,
+     12,
+     8,
+     8
+    ],
+    "esn_units": 200,
+    "esn_total": 50.070104509630994,
+    "G0": true,
+    "G1": true,
+    "G2": false,
+    "n_features": 800,
+    "G2_loose": true,
+    "esn_units_loose": 16,
+    "esn_total_loose": 15.398129730621227
+   },
+   "current": {
+    "operating_point": {
+     "hold": 100,
+     "v_center": 0.91
+    },
+    "selected_on": "validation (val_MC + val_IPC2)",
+    "consistency_inc": {
+     "mean": 0.9999982724708069,
+     "sd": 2.6907160871762616e-06,
+     "n": 3
+    },
+    "MC": {
+     "mean": 2.605747311123358,
+     "sd": 0.7127060420997773,
+     "n": 6
+    },
+    "IPC2": {
+     "mean": 5.574941149350625,
+     "sd": 0.939879460902851,
+     "n": 6
+    },
+    "narma10_nmse": {
+     "mean": 0.5630281915172716,
+     "sd": 0.11630242336674992,
+     "n": 6
+    },
+    "accuracy": {
+     "mean": 1.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "total_capacity": {
+     "mean": 8.180688460473982,
+     "sd": 1.6114918442182375,
+     "n": 6
+    },
+    "lags_above_floor": [
+     10,
+     10,
+     12,
+     12,
+     5,
+     5
+    ],
+    "esn_units": 200,
+    "esn_total": 50.070104509630994,
+    "G0": true,
+    "G1": false,
+    "G2": false,
+    "n_features": 800,
+    "G2_loose": false,
+    "esn_units_loose": 16,
+    "esn_total_loose": 15.398129730621227
+   },
+   "probes": {
+    "operating_point": {
+     "hold": 100,
+     "v_center": 0.91
+    },
+    "selected_on": "validation (val_MC + val_IPC2)",
+    "consistency_inc": {
+     "mean": 0.9961514817017522,
+     "sd": 0.005547303421647841,
+     "n": 3
+    },
+    "MC": {
+     "mean": 2.751220606618668,
+     "sd": 0.5222723382240146,
+     "n": 6
+    },
+    "IPC2": {
+     "mean": 4.731850823022985,
+     "sd": 1.027481766558064,
+     "n": 6
+    },
+    "narma10_nmse": {
+     "mean": 0.42197861416615173,
+     "sd": 0.07477547590244654,
+     "n": 6
+    },
+    "accuracy": {
+     "mean": 1.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "total_capacity": {
+     "mean": 7.483071429641652,
+     "sd": 1.5342707202615697,
+     "n": 6
+    },
+    "lags_above_floor": [
+     11,
+     10,
+     14,
+     14,
+     15,
+     14
+    ],
+    "esn_units": 32,
+    "esn_total": 27.688909454895388,
+    "G0": true,
+    "G1": true,
+    "G2": false,
+    "n_features": 32,
+    "G2_loose": false,
+    "esn_units_loose": 32,
+    "esn_total_loose": 27.688909454895388
+   }
+  }
+ }
+}

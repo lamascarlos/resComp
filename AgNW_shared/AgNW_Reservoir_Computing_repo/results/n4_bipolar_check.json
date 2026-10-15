@@ -1,0 +1,36 @@
+{
+ "amplitude_V": 3.0,
+ "hold": 30,
+ "n_samples": 400,
+ "closed_fraction_mean": 0.0,
+ "closed_fraction_max": 0.0,
+ "max_abs_lambda_over_crit": 0.9220084547996521,
+ "consistency": {
+  "current": null,
+  "probes": 0.9057181195999559,
+  "junctions": 0.12355813799469817,
+  "current_state": null,
+  "probes_state": 0.051694965633023365,
+  "junctions_state": 0.12355813799469817
+ },
+ "scores": {
+  "current": {
+   "lag0": 0.0,
+   "MC": 0.0,
+   "IPC2": 0.0,
+   "narma10_nmse": 1.3713646246022368
+  },
+  "probes": {
+   "lag0": 0.9999999994890363,
+   "MC": 0.0,
+   "IPC2": 0.0,
+   "narma10_nmse": 1.1173372477798222
+  },
+  "junctions": {
+   "lag0": 0.0,
+   "MC": 0.0,
+   "IPC2": 0.0,
+   "narma10_nmse": 1.0976938836684493
+  }
+ }
+}

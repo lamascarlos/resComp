@@ -1,0 +1,55 @@
+| step | result | method | detail |
+|------|--------|--------|--------|
+| OU: stationary variance = T/k (Lyapunov) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| OU: R' = -mu k R (impulse response ODE) | PASS | symbolic | residual simplifies to 0 |
+| Eq.8 correct: R(t) = -beta dC/dt | PASS | symbolic | lhs - rhs simplifies to 0 |
+| Eq.8 as written: chi = +beta dC/dt | PASS | numeric | claimed identity is refuted (difference != 0) |
+| Eq.8 step form: chi_step = beta[C(0)-C(t)] = int_0^t R | PASS | symbolic | lhs - rhs simplifies to 0 |
+| 2-state: R' = -lam R | PASS | symbolic | residual simplifies to 0 |
+| 2-state: C' = -lam C | PASS | symbolic | residual simplifies to 0 |
+| 2-state: int_0^inf R dt = d p*/dV (independent static check) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| 2-state, detailed-balance rates: R = -(beta q) dC/dt (FDT holds) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| 2-state, general: R/(-dC/dt) = a1/a - b1/b = d ln(a/b)/dV  (exact, any t) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| 2-state, b1=0: R/(-dC/dt) = a1/a, independent of t | PASS | symbolic | lhs - rhs simplifies to 0 |
+| SET rate: d ln s/dV = alpha/(exp(alpha(V-Vth))-1) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| SET rate near threshold: (V-Vth) s'/s -> 1 | PASS | symbolic | limit = 1 = expected |
+| discrete: stationary p* = s/(s+r) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| discrete: step response recursion dp_{n+1} = (1-lam) dp_n + ds(1-p*) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| discrete: dp_0 = 0 | PASS | symbolic | lhs - rhs simplifies to 0 |
+| discrete: C(n) = p*(1-p*)(1-lam)^n obeys C(n+1) = (1-lam) C(n) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| discrete: step response / [C(0)-C(n)] = ds/s, independent of n | PASS | symbolic | lhs - rhs simplifies to 0 |
+| Eq.10: d/dg[-gA rho + g (B rho)' - B rho] = g*RHS_FP - A rho, i.e. int g d_t rho = [-gJ - B rho]_0^1 + <A>, J = A rho - (B rho)' | PASS | symbolic (abstract functions) | residual = 0 |
+| Bernoulli(s) variance = s(1-s) (sympy.stats) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| KM: N*Var[dg] = [s(1-g)+r g] - [s^2(1-g)+r^2 g]  (independent junctions; leading order s,r<<1). MC check of the full variance: verify_mc.py | PASS | symbolic | lhs - rhs simplifies to 0 |
+| Eq.7 B(g) has (1-g)^2, g^2 and no 1/N: differs from Kramers-Moyal B | PASS | numeric | claimed identity is refuted (difference != 0) |
+| Eq.7 vs KM(N=1) differ in g-dependence but coincide at the boundaries g=0 and g=1 | PASS | symbolic | lhs - rhs simplifies to 0 |
+| ...and differ in the interior (g=1/2) | PASS | numeric | claimed identity is refuted (difference != 0) |
+| Eq.2 with doc units [P_decay]=s A^-2: dt P_decay I^2 dimensionless? | PASS | symbolic | not dimensionless: reduces to second**2 |
+| Eq.2 with [P_decay]=s^-1 A^-2: dt P_decay I^2 dimensionless | PASS | symbolic | reduces to 1 |
+| Eq.14: P_decay/(P0 alpha) dimensionless? (X-1 must be) | PASS | symbolic | not dimensionless: reduces to kilogram*meter**2/(ampere**3*second**3) |
+| Eq.13: (I^2/V^2) P_decay/(P0 alpha) dimensionless? | PASS | symbolic | not dimensionless: reduces to ampere*second**3/(kilogram*meter**2) |
+| Eq.12: [int <gdot gdot> ds / (kB T)] has units of chi = 1/V? | PASS | symbolic | not dimensionless: reduces to 1/(ampere*second**2) |
+| Eq.16: [oint I dV] = A V has units of energy? | PASS | symbolic | not dimensionless: reduces to 1/second |
+| Eq.16: linear resistor: oint I dV = 0 over a cycle | PASS | symbolic | lhs - rhs simplifies to 0 |
+| ...but dissipated energy int I V dt = pi V0^2/(R w) > 0 | PASS | symbolic | lhs - rhs simplifies to 0 |
+| Sec.10.1: N_c = 5.637 A/L^2 for A=1 mm^2, L=70 um is ~1150 (doc: ~1200) | PASS | symbolic | N_c = 1150.5 |
+| relax(exp): stationary p* = s/(s+b) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| relax(exp): step response solves dp_{n+1} = (1-lam) dp_n + (1-p*) ds - p* db | PASS | symbolic | lhs - rhs simplifies to 0 |
+| relax(exp): chi_step/[C(0)-C(n)] = ds/s - db/b  (any n, any eps) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| relax(exp): SET-only perturbation (dr=0): ratio = ds/s, independent of eps and r | PASS | symbolic | lhs - rhs simplifies to 0 |
+| relax(exp): RESET part of the ratio is diluted by eps: db/b -> 2 r/(r+eps) dI/I  (b~r+eps, r~I^2) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| renewal: E[D] = sum_{k=1}^L (1-r)^(k-1) = (1-(1-r)^L)/r | PASS | symbolic | lhs - rhs simplifies to 0 |
+| renewal (L=4): stationary pi_OFF = 1/(1 + s E[D]) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| renewal (L=4): stationary pi_ON,j = pi_OFF s (1-r)^j  (j=2) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| renewal: p* = E[D]/(E[D]+1/s)  (L=4) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| renewal: L->inf recovers the two-state p* = s/(s+r)  (p*(t) as t=(1-r)^L -> 0) | PASS | symbolic | limit = 1/(r*(1/s + 1/r)) = expected |
+| renewal: a1->a2 has probability flux, a2->a1 has none => detailed balance violated | PASS | numeric | claimed identity is refuted (difference != 0) |
+| renewal: reverse transition probability P(a2 -> a1) = 0 | PASS | symbolic | lhs - rhs simplifies to 0 |
+| renewal (L=4): RESET-side ratio at n=1, Y(1) = -r dp_1/(dr[C(0)-C(1)]) = fraction of ON-exit flux due to RESET = r(p*-pi_{L-1}) / [r(p*-pi_{L-1}) + pi_{L-1}]   (from explicit matrices) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| renewal: Y(1) = 1 when the lifetime never binds (pi_{L-1} = 0)  [algebraic substitution] | PASS | symbolic | Y(1) at pi_{L-1}=0 equals 1 |
+| renewal (L=3): SET-side ratio X(n=1) = 1 exactly (explicit matrices) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| renewal (L=3): SET-side ratio X(n=2) = 1 exactly (explicit matrices) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| renewal (L=3): SET-side ratio X(n=3) = 1 exactly (explicit matrices) | PASS | symbolic | lhs - rhs simplifies to 0 |
+| renewal (L=3): SET-side ratio X(n=4) = 1 exactly (explicit matrices) | PASS | symbolic | lhs - rhs simplifies to 0 |
+
+51/51 checks PASS (refutation checks pass when the doc's claim is shown false)

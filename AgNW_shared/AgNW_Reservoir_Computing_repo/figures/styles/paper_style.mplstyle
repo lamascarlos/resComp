@@ -1,0 +1,68 @@
+# paper_style.mplstyle -- publication figures.
+# Small, restrained, serif-matching body text. Sized for single-column print.
+# Load with: plt.style.use("assets/paper_style.mplstyle")
+
+# ---- Figure ----
+figure.figsize      : 3.5, 2.6      # inches; ~single-column width
+figure.dpi          : 300
+savefig.dpi         : 300
+# NOTE: bbox 'tight' silently changes figure dimensions -- fine for preprints/
+# talks, but for journals requiring an EXACT width, override to 'standard' in
+# code (savefig(..., bbox_inches=None)) and rely on constrained_layout instead.
+savefig.bbox        : standard
+savefig.pad_inches  : 0.02
+savefig.transparent : False
+figure.facecolor    : white
+figure.autolayout   : False         # prefer constrained_layout=True in code
+
+# ---- Fonts (match typical LaTeX body: serif) ----
+font.family         : serif
+font.serif          : DejaVu Serif, Times New Roman, Computer Modern Roman
+font.size           : 8
+axes.titlesize      : 9
+axes.labelsize      : 8
+xtick.labelsize     : 7
+ytick.labelsize     : 7
+legend.fontsize     : 7
+# For true LaTeX text set text.usetex: True in code when a TeX install exists.
+mathtext.fontset    : cm
+
+# ---- Axes ----
+axes.linewidth      : 0.8
+axes.edgecolor      : black
+axes.labelcolor     : black
+axes.spines.top     : False
+axes.spines.right   : False
+axes.grid           : False
+axes.axisbelow      : True
+axes.prop_cycle     : cycler('color', ['0072B2','D55E00','009E73','CC79A7','56B4E9','E69F00','000000'])
+# ^ Wong colorblind-safe palette.
+
+# ---- Ticks ----
+xtick.direction     : out
+ytick.direction     : out
+xtick.major.size    : 3
+ytick.major.size    : 3
+xtick.major.width   : 0.8
+ytick.major.width   : 0.8
+xtick.minor.visible : True
+ytick.minor.visible : True
+xtick.minor.size    : 1.5
+ytick.minor.size    : 1.5
+
+# ---- Lines / markers ----
+lines.linewidth     : 1.2
+lines.markersize    : 3
+lines.markeredgewidth : 0.5
+
+# ---- Legend ----
+legend.frameon      : False
+legend.handlelength : 1.5
+legend.columnspacing : 1.0
+
+# ---- Images / colormap ----
+image.cmap          : viridis
+image.origin        : lower
+
+# ---- Errorbars ----
+errorbar.capsize    : 2

@@ -1,0 +1,218 @@
+[
+ {
+  "layout": "split_bands",
+  "encoding": "direct",
+  "subset": "all_50_nodes",
+  "n_features": 800,
+  "MC": 2.211138958687292,
+  "IPC2": 4.383602856248376,
+  "narma10_nmse": 0.5625066950562745
+ },
+ {
+  "layout": "split_bands",
+  "encoding": "direct",
+  "subset": "5_nodes",
+  "n_features": 80,
+  "MC": 2.2169595872485086,
+  "IPC2": 4.381475940555686,
+  "narma10_nmse": 0.5759369525962217
+ },
+ {
+  "layout": "split_bands",
+  "encoding": "direct",
+  "subset": "end_of_hold",
+  "n_features": 16,
+  "MC": 1.4207572736885894,
+  "IPC2": 2.043002298955819,
+  "narma10_nmse": 0.6321632730259021
+ },
+ {
+  "layout": "split_bands",
+  "encoding": "direct",
+  "subset": "one_electrode_end",
+  "n_features": 1,
+  "MC": 0.0,
+  "IPC2": 0.0,
+  "narma10_nmse": 0.7871271062136794
+ },
+ {
+  "layout": "split_bands",
+  "encoding": "weights",
+  "subset": "all_50_nodes",
+  "n_features": 800,
+  "MC": 1.966597686524855,
+  "IPC2": 4.881584651397974,
+  "narma10_nmse": 0.5988659373639986
+ },
+ {
+  "layout": "split_bands",
+  "encoding": "weights",
+  "subset": "5_nodes",
+  "n_features": 80,
+  "MC": 1.8846947432343772,
+  "IPC2": 4.743764101117457,
+  "narma10_nmse": 0.6006568847008
+ },
+ {
+  "layout": "split_bands",
+  "encoding": "weights",
+  "subset": "end_of_hold",
+  "n_features": 16,
+  "MC": 1.1071608520364138,
+  "IPC2": 2.4190355144823834,
+  "narma10_nmse": 0.6486557882326791
+ },
+ {
+  "layout": "split_bands",
+  "encoding": "weights",
+  "subset": "one_electrode_end",
+  "n_features": 1,
+  "MC": 0.0,
+  "IPC2": 0.0,
+  "narma10_nmse": 0.8785077080242553
+ },
+ {
+  "layout": "pads",
+  "encoding": "direct",
+  "subset": "all_50_nodes",
+  "n_features": 800,
+  "MC": 1.955741393848104,
+  "IPC2": 3.2845278232029873,
+  "narma10_nmse": 0.6290990666656605
+ },
+ {
+  "layout": "pads",
+  "encoding": "direct",
+  "subset": "5_nodes",
+  "n_features": 80,
+  "MC": 1.8597095473081886,
+  "IPC2": 3.381688402122503,
+  "narma10_nmse": 0.6303084719575542
+ },
+ {
+  "layout": "pads",
+  "encoding": "direct",
+  "subset": "end_of_hold",
+  "n_features": 16,
+  "MC": 1.0950516071208987,
+  "IPC2": 1.2260313918890646,
+  "narma10_nmse": 0.7558209294581196
+ },
+ {
+  "layout": "pads",
+  "encoding": "direct",
+  "subset": "one_electrode_end",
+  "n_features": 1,
+  "MC": 0.06525512114734511,
+  "IPC2": 0.027054912969786127,
+  "narma10_nmse": 0.728621671871814
+ },
+ {
+  "layout": "pads",
+  "encoding": "weights",
+  "subset": "all_50_nodes",
+  "n_features": 800,
+  "MC": 2.868367774840086,
+  "IPC2": 5.44907649696324,
+  "narma10_nmse": 0.4895092679712856
+ },
+ {
+  "layout": "pads",
+  "encoding": "weights",
+  "subset": "5_nodes",
+  "n_features": 80,
+  "MC": 2.9147397908491017,
+  "IPC2": 5.404106014705521,
+  "narma10_nmse": 0.5258664424131145
+ },
+ {
+  "layout": "pads",
+  "encoding": "weights",
+  "subset": "end_of_hold",
+  "n_features": 16,
+  "MC": 2.0640128930178028,
+  "IPC2": 2.023010964058025,
+  "narma10_nmse": 0.5026492093180456
+ },
+ {
+  "layout": "pads",
+  "encoding": "weights",
+  "subset": "one_electrode_end",
+  "n_features": 1,
+  "MC": 0.05416964698502158,
+  "IPC2": 0.13942586087660302,
+  "narma10_nmse": 0.7546482341804791
+ },
+ {
+  "layout": "pads_float",
+  "encoding": "direct",
+  "subset": "all_50_nodes",
+  "n_features": 800,
+  "MC": 1.8983756094928879,
+  "IPC2": 4.123687379835094,
+  "narma10_nmse": 0.6461398757877612
+ },
+ {
+  "layout": "pads_float",
+  "encoding": "direct",
+  "subset": "5_nodes",
+  "n_features": 80,
+  "MC": 1.959926820932179,
+  "IPC2": 4.115675363412857,
+  "narma10_nmse": 0.6568589335768725
+ },
+ {
+  "layout": "pads_float",
+  "encoding": "direct",
+  "subset": "end_of_hold",
+  "n_features": 16,
+  "MC": 1.5331088673204063,
+  "IPC2": 2.199949806510231,
+  "narma10_nmse": 0.7168640935919985
+ },
+ {
+  "layout": "pads_float",
+  "encoding": "direct",
+  "subset": "one_electrode_end",
+  "n_features": 1,
+  "MC": 0.0,
+  "IPC2": 0.0,
+  "narma10_nmse": 0.9014572616320541
+ },
+ {
+  "layout": "pads_float",
+  "encoding": "weights",
+  "subset": "all_50_nodes",
+  "n_features": 800,
+  "MC": 2.6229762109163013,
+  "IPC2": 5.70542308224894,
+  "narma10_nmse": 0.4920872756913972
+ },
+ {
+  "layout": "pads_float",
+  "encoding": "weights",
+  "subset": "5_nodes",
+  "n_features": 80,
+  "MC": 2.3848437039086,
+  "IPC2": 5.733403719889725,
+  "narma10_nmse": 0.5022584547836996
+ },
+ {
+  "layout": "pads_float",
+  "encoding": "weights",
+  "subset": "end_of_hold",
+  "n_features": 16,
+  "MC": 2.0558064785693793,
+  "IPC2": 3.6637011067205805,
+  "narma10_nmse": 0.5335738336585324
+ },
+ {
+  "layout": "pads_float",
+  "encoding": "weights",
+  "subset": "one_electrode_end",
+  "n_features": 1,
+  "MC": 0.0,
+  "IPC2": 0.0,
+  "narma10_nmse": 0.9127722926851473
+ }
+]

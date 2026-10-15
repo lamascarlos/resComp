@@ -1,0 +1,54 @@
+{
+ "steady_state": {
+  "onset_V_model_10x": 2.4,
+  "first_V_measured_above_1nS": 2.5,
+  "G_sat_S": 6.4886243079617e-05,
+  "gap_m": 0.007,
+  "theta_low_V_per_s": 31.7305245619888,
+  "theta_3p6V_per_s": 0.115879070800861
+ },
+ "stationary_3p6V": {
+  "G_mean_S": 3.419648946393582e-05,
+  "sample_dt_s": 0.6000000000003638,
+  "duration_s": 15199.4,
+  "gauss_sd_dGdt_S_per_s": 2.711820464771783e-08,
+  "gauss_sd_rel_per_sample": 0.0004758068165388773,
+  "threshold_dGdt_S_per_s": 6.92592592485017e-08,
+  "threshold_over_gauss_sd": 2.5539765684425686,
+  "threshold_rel_per_sample": 0.0012151994605455448,
+  "jump_samples": 1565,
+  "jump_samples_up": 797,
+  "jump_samples_down": 768,
+  "jump_rate_per_s_fig3g": 0.07986041481286205,
+  "jump_rate_per_s_samples": 0.10296459070752793,
+  "jump_rel_median": 0.0016944559326136344,
+  "jump_rel_max": 0.01944435179710092,
+  "powerlaw_alpha": 2.9811611628048977,
+  "powerlaw_alpha_se": 0.05007980565885221,
+  "powerlaw_n": 1565,
+  "paper": {
+   "jump_rate_per_s": 0.082,
+   "powerlaw_alpha": 2.78,
+   "powerlaw_alpha_se": 0.07
+  }
+ },
+ "relaxation_10mV": {
+  "duration_s": 249.184741199017,
+  "G_start_S": 0.0253794744344149,
+  "G_end_S": 0.0251452007682402,
+  "fractional_drop": 0.009230832056042138,
+  "fractional_drop_first_10s": 0.0022666138783706824
+ },
+ "density": {
+  "their_wires_est": 472001.5344317053,
+  "their_area_m2": 0.0001,
+  "their_L_m": 3.5e-05,
+  "their_nL2": 5.782018796788389,
+  "our_wires": 2000,
+  "our_area_m2": 1e-06,
+  "our_L_m": 7e-05,
+  "our_nL2": 9.799999999999999,
+  "percolation_nL2": 5.64,
+  "note": "mass-based estimate assumes all wires land on the 1 cm^2 area and L = 35 um (20-50 um)"
+ }
+}
