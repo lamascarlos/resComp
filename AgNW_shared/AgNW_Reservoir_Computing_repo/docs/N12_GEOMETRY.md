@@ -242,3 +242,65 @@ tail -f n12.log
 Para que una GPU ayude haría falta otro solver: multigrilla algebraica, o resolver muchas corridas a la vez en lotes.
 Es un desarrollo aparte, sin garantía de ganancia. `python scripts/gpu_benchmark.py` (con CuPy instalado) mide lo que
 daría la GPU de una máquina concreta antes de invertir en eso.
+
+---
+
+## 7. Resultados preliminares (Colab, 19/10/2026)
+
+**Resumen.** En una corrida corta, `clusters4` superó a la red uniforme en las tres métricas (MC +25 %, IPC2 +29 %),
+y `aligned_x` dio prácticamente lo mismo que la uniforme. Es **una sola red y una sola corrida** por geometría: es una
+tendencia, no un resultado firme.
+
+**Protocolo** (notebook `resComp_geometrias.ipynb`, versión reducida del de §5): el reservoir de N10-E (16 pads, pesos
+de entrada al azar, unión volátil τ_s = 0,3 s, dispersión 1, holds de 100 ms, `stride` 2). Lo que cambia respecto del
+experimento completo:
+
+- **300 entradas** (en vez de 800) y **10 nodos virtuales** (en vez de 50);
+- washout de 7000 pasos;
+- **red de semilla 1, réplica 0**, sin repeticiones;
+- **una sola ventana:** centro 1,25 × onset, ancho 0,45 × onset (onsets de `results/n12_sweep.json`), en lugar de
+  elegir entre dos ventanas con datos de validación;
+- sin rupturas.
+
+| geometría | junturas | MC | IPC2 | NARMA-10 | tiempo en Colab |
+|---|---|---|---|---|---|
+| `uniform` (referencia) | 5953 | 1,99 | 4,35 | 0,507 | 871 s |
+| `clusters4` | 12 673 | **2,49** (+25 %) | **5,60** (+29 %) | **0,491** | 2153 s |
+| `aligned_x` | 3030 | 2,13 (+7 %) | 4,31 (−1 %) | 0,524 | 199 s |
+| entrada sola | — | 0,00 | 0,00 | 0,823 | — |
+
+MC e IPC2: más alto es mejor. NARMA-10: más bajo es mejor; los umbrales de G1 son MC ≥ 1, IPC2 ≥ 1 y NARMA-10 ≤ 0,70.
+
+![Puntajes en Colab](../figures/fig38_n12_colab_scores.png)
+
+![Función de memoria en Colab](../figures/fig39_n12_colab_memory.png)
+
+*Figuras 38 y 39 (salidas de la notebook en Colab): puntajes por geometría (gris = uniforme, gris claro = entrada
+sola, línea roja = umbral de G1) y función de memoria C_k, la capacidad de reconstruir u[k − retardo].*
+
+**Lectura.**
+
+1. **Las tres geometrías superan los umbrales de G1** en esta corrida y le ganan con claridad a la entrada sola.
+2. **`clusters4` es la mejor en las tres métricas**, aunque está partida en 4 grupos densos casi aislados (§4: el mayor
+   componente tiene el 23 % de los hilos). Cada cluster toca 2 pads de entrada y 2 de tierra, así que el dispositivo
+   funciona como 4 sub-reservoirs en paralelo. Probablemente pesa más tener el doble de junturas, con respuestas más
+   diversas, que la conectividad global.
+3. **La memoria de `clusters4` dura más.** Todavía reconstruye ~20 % de la entrada de 3 a 5 pasos atrás, cuando la
+   uniforme ya está en ~0. En los retardos 0–2 las tres geometrías son iguales.
+4. **Alinear los hilos casi no cambia nada.** `aligned_x` tiene la mitad de junturas y puntajes iguales a los de la
+   uniforme, con una simulación 4 veces más rápida.
+5. **Reproducibilidad.** Los números de Colab coinciden exactamente con los de la misma configuración corrida en otra
+   máquina (Linux, Python 3.13): la simulación es determinista entre máquinas.
+
+**Cuidado al interpretarlo.** En N10-E, la variación entre 3 redes × 2 réplicas fue de ±0,66 en MC y ±1,2 en IPC2.
+La ventaja de `clusters4` (+0,50 en MC, +1,25 en IPC2) es del orden de esa dispersión. Para confirmarla hacen falta
+las corridas completas de §5 (3 redes × 2 réplicas, dos ventanas, criterios G0/G1/G2).
+
+**Estado de las corridas completas (19/10/2026, 19:20 UTC).**
+- `uniform`: 14 de 18 terminadas.
+- `aligned_x` y `aligned_y`: en curso en una máquina en la nube, que se reinició una vez y obligó a relanzarlas.
+- `clusters4`, `clusters4_dense` y `clusters_line`: pendientes; conviene correrlas en una máquina estable (§6).
+
+**Tiempos.** Colab resultó unas 3,5 veces más lento que una máquina con Xeon de 2,1 GHz: las 3 geometrías tardaron
+~54 minutos en total. El costo crece con la cantidad de junturas: `clusters4` tardó 2,5 veces lo que la uniforme y
+`aligned_x`, 0,23 veces.
