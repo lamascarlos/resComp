@@ -60,6 +60,7 @@ Está en `AgNW_Reservoir_Computing_repo/agnw_rc/`. Los modelos de unión son lo 
 | Evaluación | `baselines.py` | Referencias sin nanohilos: línea de retardo y ESN |
 | Evaluación | `criteria.py` | Punto de operación y veredictos G0/G1/G2 |
 | Calibración N11 (en curso) | `strip.py`, `n11sim.py`, `series_stats.py`, `n11loss.py` | Tira rectangular como el dispositivo medido, protocolos de medición, estadística de series y función de pérdida contra Milano 2025 |
+| Geometría N12 | `substrate.py` | Distribución de los hilos en el sustrato: clusters gaussianos en posiciones fijas y orientación normal (μ, σ), con N fijo; se elige con `RunSpec(geometry=...)`. Ver `docs/N12_GEOMETRY.md` |
 
 ## Scripts, tests y carpetas de apoyo
 

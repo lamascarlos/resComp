@@ -66,7 +66,7 @@ def simulate(spec: C.RunSpec, n_samples: int | None = None, washout_steps: int |
     """Run one spec. n_samples / washout_steps override the config (for tests). Returns a dict of arrays."""
     t0 = time.time()
     params, wire_diameter = C.network_params(spec.p_relax)
-    network = C.make_network(spec.network_seed)
+    network = C.make_network(spec.network_seed, geometry=spec.geometry)
     u, labels = input_stream(spec)
     if n_samples is not None:
         u = u[:n_samples]

@@ -35,12 +35,18 @@ def network_params(p_relax: float = P_RELAX) -> tuple[SimParams, float]:
     return dataclasses.replace(params, p_relax=p_relax), run_kwargs["wire_diameter"]
 
 
-def make_network(network_seed: int, n_wires: int = N_WIRES, side: float = 0.0) -> Network:
+def make_network(network_seed: int, n_wires: int = N_WIRES, side: float = 0.0, geometry: str = "") -> Network:
     """The network geometry depends only on network_seed (as in build_setup). side > 0 (mm): a square of that side at
-    the same wire density (N10-L), N_WIRES x side^2 wires; side = 0 is the 1 mm working model."""
+    the same wire density (N10-L), N_WIRES x side^2 wires; side = 0 is the 1 mm working model. geometry: a name in
+    substrate.GEOMETRIES (N12: clustered centres, oriented wires); "" = the framework's uniform placement."""
     if side:
-        return build_network(int(round(N_WIRES * side ** 2)), AREA * side ** 2, LENGTH, np.random.default_rng(network_seed))
-    return build_network(n_wires, AREA, LENGTH, np.random.default_rng(network_seed))
+        n_wires, area = int(round(N_WIRES * side ** 2)), AREA * side ** 2
+    else:
+        area = AREA
+    if geometry:
+        from .substrate import GEOMETRIES, build_network as build_custom
+        return build_custom(n_wires, area, LENGTH, np.random.default_rng(network_seed), GEOMETRIES[geometry])
+    return build_network(n_wires, area, LENGTH, np.random.default_rng(network_seed))
 
 
 def framework_commit() -> str:
@@ -84,6 +90,7 @@ class RunSpec:
     forming_v: float = 0.0      # N10-K: forming voltage on every driven electrode (V)
     p_c2: float = 0.0           # N10-K: consolidation power threshold override in W (0 = VolatileParams default 1e-6)
     side: float = 0.0           # N10-L: network side in mm at the working density (0 = the 1 mm working model)
+    geometry: str = ""          # N12: wire placement, a name in substrate.GEOMETRIES ("" = framework uniform)
 
     @property
     def washout_steps(self) -> int:
@@ -114,6 +121,7 @@ class RunSpec:
                 + (f"_prmax{self.p_relax_max:.0e}" if self.p_relax_max else "")
                 + (f"_{self.layout}_{self.encoding}" if self.layout else "")
                 + (f"_L{self.side:g}" if self.side else "")
+                + (f"_g{self.geometry}" if self.geometry else "")
                 + ("_fil" + (f"_sig{self.sigma:.0e}" if self.sigma else "") if self.model == "filament" else "")
                 + (f"_vol_ts{self.tau_s:g}_sp{self.tau_spread:g}" + ("_con" if self.consolidation else "")
                    + (f"_kc{self.k_c:g}" if self.k_c else "") + (f"_tl{self.tau_l:g}" if self.tau_l else "")
