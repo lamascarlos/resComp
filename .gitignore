@@ -6,3 +6,4 @@ build/
 .pytest_cache/
 .venv/
 .ipynb_checkpoints/
+AgNW_shared/AgNW_Reservoir_Computing_repo/results/raw/

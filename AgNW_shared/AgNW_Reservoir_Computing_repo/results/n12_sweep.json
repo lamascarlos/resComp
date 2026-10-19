@@ -1,0 +1,32 @@
+{
+ "uniform": {
+  "onset_V": 0.345,
+  "n_junctions": 5953,
+  "pad_wires_mean": 14.0
+ },
+ "clusters4": {
+  "onset_V": 0.342,
+  "n_junctions": 12673,
+  "pad_wires_mean": 9.9375
+ },
+ "clusters4_dense": {
+  "onset_V": 0.333,
+  "n_junctions": 16319,
+  "pad_wires_mean": 9.25
+ },
+ "clusters_line": {
+  "onset_V": 0.333,
+  "n_junctions": 16205,
+  "pad_wires_mean": 10.8125
+ },
+ "aligned_x": {
+  "onset_V": 0.339,
+  "n_junctions": 3030,
+  "pad_wires_mean": 13.375
+ },
+ "aligned_y": {
+  "onset_V": 0.321,
+  "n_junctions": 3005,
+  "pad_wires_mean": 13.6875
+ }
+}
