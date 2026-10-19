@@ -209,3 +209,36 @@ los círculos rojos marcan 2σ de cada cluster.*
    percolación.
 4. **Combinar** clusters y orientación (por ejemplo, filas de clusters con hilos alineados) y probar el efecto de
    las rupturas (`rupture`) sobre redes con menos caminos redundantes.
+
+---
+
+## 6. Dónde correr el experimento completo
+
+**Costo.** Casi todo el tiempo de una corrida (98–99 %) se va en resolver el sistema de Kirchhoff de cada paso.
+El tamaño del sistema crece con las junturas: 12 146 incógnitas en la red uniforme y 32 802 en `clusters4_dense`, es
+decir 17,5 y 53 ms por paso en un núcleo. Cada corrida usa un solo núcleo; el paralelismo es entre corridas.
+
+**En una PC con Ubuntu:** `cluster/run_n12_local.sh` clona o actualiza el repo, arma el entorno, corre las geometrías
+pedidas con todos los núcleos menos uno, hace el `report` y sube `results/n12_criteria.json` y la figura a la rama.
+`report` conserva las filas de las geometrías que reportó otra máquina, así que se pueden repartir las geometrías y
+juntar los resultados con git:
+
+```bash
+nohup bash cluster/run_n12_local.sh clusters4,clusters4_dense,clusters_line > n12.log 2>&1 &
+tail -f n12.log
+```
+
+**¿GPU?** No conviene con el solver actual. `scripts/gpu_benchmark.py` mide un paso típico de cada forma:
+
+- En la CPU, el solver del proyecto (gradiente conjugado con precondicionador LU y arranque desde el paso anterior)
+  converge en pocas iteraciones, con error ~10⁻¹³.
+- El precondicionador LU necesita resolver sistemas triangulares ralos, algo que las GPU hacen mal. El candidato
+  natural en GPU es el gradiente conjugado con precondicionador de Jacobi. En la red uniforme (19/10/2026, en CPU) ese
+  método necesitó **1353 iteraciones por paso** para llegar a un residuo relativo de 10⁻¹⁰, y el error siguió en
+  **3·10⁻⁴**: las conductancias van de 10⁻⁹ a 10⁻³ S y el sistema está muy mal condicionado.
+- En float32 el método no avanza nada: se detiene en 1 iteración con el mismo error de 3·10⁻⁴. Además, las Titan X
+  (Maxwell y Pascal) calculan en float64 a 1/32 de su velocidad en float32.
+
+Para que una GPU ayude haría falta otro solver: multigrilla algebraica, o resolver muchas corridas a la vez en lotes.
+Es un desarrollo aparte, sin garantía de ganancia. `python scripts/gpu_benchmark.py` (con CuPy instalado) mide lo que
+daría la GPU de una máquina concreta antes de invertir en eso.

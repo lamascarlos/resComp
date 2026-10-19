@@ -12,7 +12,9 @@
            volatile junction tau_s 0.3 s, spread 1, 100 ms holds, 800 inputs, windows 1.05 / 1.25 x onset (width
            0.45 x onset), 3 networks x 2 replicates + sine/square, no ruptures -> results/raw/*.npz
   report   scores and G0/G1/G2 per geometry (agnw_rc.criteria, as N10-L); "uniform" is the control through this same
-           pipeline, the published N10-E row a cross-check -> results/n12_criteria.json, figures/fig37_n12_scores.png
+           pipeline, the published N10-E row a cross-check -> results/n12_criteria.json, figures/fig37_n12_scores.png.
+           Rows of geometries not in --only are kept from an existing n12_criteria.json, so machines that ran different
+           geometries can each report theirs and merge through git (cluster/run_n12_local.sh).
 
     python scripts/n12_geometry.py stats [--only clusters4,aligned_x] [--seeds 1,2,3]
     python scripts/n12_geometry.py figure
@@ -230,6 +232,11 @@ def report(names, procs):
             print(f"{name}: incomplete ({err})")
             continue
         rows.append({"geometry": name, **strict, "G2_loose": loose["G2"], "n_runs": len(runs)})
+    if CRIT.exists():                       # keep geometries reported elsewhere (e.g. on another machine)
+        done = {x["geometry"] for x in rows}
+        prev = [x for x in json.loads(CRIT.read_text())["rows"] if x["geometry"] not in done]
+        order = {g: k for k, g in enumerate(["N10-E (ref.)"] + list(GEOMETRIES))}
+        rows = sorted(rows + prev, key=lambda x: order.get(x["geometry"], len(order)))
     for x in rows:
         acc = x["accuracy"]["mean"] if x.get("accuracy") else float("nan")
         print(f"{x['geometry']:16s} op {x['operating_point']} MC {x['MC']['mean']:.2f}+-{x['MC']['sd']:.2f} "
