@@ -301,6 +301,7 @@ las corridas completas de §5 (3 redes × 2 réplicas, dos ventanas, criterios G
 - `aligned_x` y `aligned_y`: en curso en una máquina en la nube, que se reinició una vez y obligó a relanzarlas.
 - `clusters4`, `clusters4_dense` y `clusters_line`: pendientes; conviene correrlas en una máquina estable (§6).
 
-**Tiempos.** Colab resultó unas 3,5 veces más lento que una máquina con Xeon de 2,1 GHz: las 3 geometrías tardaron
-~54 minutos en total. El costo crece con la cantidad de junturas: `clusters4` tardó 2,5 veces lo que la uniforme y
+**Tiempos.** Las 3 geometrías tardaron ~54 minutos en total en Colab. Comparado con la misma corrida en un núcleo de
+Xeon a 2,1 GHz (que estaba compartido con otras corridas), Colab fue 3,6 veces más lento en `uniform` y `clusters4`, y
+1,9 veces en `aligned_x`. El costo crece con la cantidad de junturas: `clusters4` tardó 2,5 veces lo que la uniforme y
 `aligned_x`, 0,23 veces.
