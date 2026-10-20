@@ -305,3 +305,60 @@ las corridas completas de §5 (3 redes × 2 réplicas, dos ventanas, criterios G
 Xeon a 2,1 GHz (que estaba compartido con otras corridas), Colab fue 3,6 veces más lento en `uniform` y `clusters4`, y
 1,9 veces en `aligned_x`. El costo crece con la cantidad de junturas: `clusters4` tardó 2,5 veces lo que la uniforme y
 `aligned_x`, 0,23 veces.
+
+---
+
+## 8. `clusters4` con electrodos en bandas (`split_bands`): fondo uniforme y percolación
+
+**Resumen.** Con los 8 + 8 electrodos de borde, `clusters4` con 30 % de fondo uniforme no conecta las bandas en 2 de
+5 redes. Con **50 % o más de fondo conecta en todas**. Para comparar con la red uniforme se agregaron
+`clusters4_b50`, `clusters4_b60` y `clusters4_b70` a `GEOMETRIES`.
+
+**El parámetro.** `GeometrySpec.background` es la fracción de los N hilos con centro uniforme; el resto,
+(1 − background)·N, se reparte entre los clusters según su `weight`. Una variante de una geometría existente:
+
+```python
+import dataclasses
+GEOMETRIES["clusters4_b55"] = dataclasses.replace(GEOMETRIES["clusters4"], background=0.55)
+```
+
+**Barrido de fondo con `split_bands`** (semillas 1–5; `network_stats` con el layout de bandas; 20/10/2026):
+
+| fondo | hilos fondo / por cluster | junturas (media) | conduce | electrodos de entrada conectados | de tierra |
+|---|---|---|---|---|---|
+| 30 % (`clusters4`) | 600 / 350 | 12 290 | 3/5 | 0, 3, 3, 0, 5 | 0, 5, 7, 0, 7 |
+| 40 % | 800 / 300 | 10 504 | 3/5 | 5, 0, 7, 0, 6 | 4, 0, 2, 0, 8 |
+| 50 % | 1000 / 250 | 9 026 | 5/5 | 8, 8, 8, 8, 5 | 6, 8, 8, 5, 7 |
+| 60 % | 1200 / 200 | 8 056 | 5/5 | 8, 7, 8, 8, 8 | 7, 7, 8, 8, 8 |
+| 70 % | 1400 / 150 | 7 154 | 5/5 | todos | todos |
+| 80 % | 1600 / 100 | 6 540 | 5/5 | todos | todos |
+| uniforme | 2000 / — | 5 953 | 5/5 | todos | todos |
+
+El umbral de percolación de banda a banda está entre 40 y 50 % de fondo.
+
+**Onset con bandas** (`python scripts/n12_geometry.py sweep --layout split_bands`, red de semilla 1, rampa de 0 a 3 V
+en 10 s; `results/n12_sweep_split_bands.json`):
+
+| geometría | onset (V) |
+|---|---|
+| `uniform` | 2,016 (N10-E, con otro método: 2,08) |
+| `clusters4_b50` | 1,908 |
+| `clusters4_b60` | 1,746 |
+| `clusters4_b70` | 1,923 |
+
+Con bandas, el onset es unas 6 veces mayor que con pads (~0,34 V), porque la corriente cruza todo el sustrato.
+
+**Notebook.** `resComp_clusters_bandas.ipynb` compara `uniform` con las tres variantes usando el protocolo reducido de §7
+(300 entradas, 1 red, ventana 1,25 × onset). Con este layout las corridas son más lentas que con pads: en un Xeon a
+2,1 GHz tardaron entre 437 s (`uniform`) y 741 s (`clusters4_b50`), con 4 corridas en paralelo.
+
+Primeros puntajes en esa máquina, 1 red y 300 entradas:
+
+| geometría | MC | IPC2 | NARMA-10 |
+|---|---|---|---|
+| `uniform` | 1,66 | 4,63 | 0,671 |
+| `clusters4_b50` | 1,22 | 2,83 | 0,703 |
+| `clusters4_b60` | 1,90 | 3,12 | 0,536 |
+| `clusters4_b70` | 1,50 | 3,69 | 0,625 |
+
+Es una sola corrida por geometría: sirve como referencia para comparar con lo que dé Colab, no como resultado.
