@@ -18,5 +18,15 @@
   "onset_V": 1.923,
   "n_junctions": 7105,
   "pad_wires_mean": 12.25
+ },
+ "cadenas2_b20": {
+  "onset_V": 1.551,
+  "n_junctions": 11751,
+  "pad_wires_mean": 13.75
+ },
+ "cadena1_b20": {
+  "onset_V": 1.527,
+  "n_junctions": 16194,
+  "pad_wires_mean": 13.625
  }
 }

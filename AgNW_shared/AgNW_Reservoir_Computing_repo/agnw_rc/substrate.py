@@ -128,6 +128,8 @@ def network_stats(network: Network, electrodes=None) -> dict:
 # Named geometries for RunSpec.geometry. Clusters sit at fixed positions (units of the substrate side).
 _C4 = (Cluster(0.25, 0.25, 0.08), Cluster(0.75, 0.25, 0.08), Cluster(0.25, 0.75, 0.08), Cluster(0.75, 0.75, 0.08))
 _LINE = (Cluster(0.2, 0.5, 0.08), Cluster(0.5, 0.5, 0.08), Cluster(0.8, 0.5, 0.08))
+_CHAIN2 = tuple(Cluster(x, y, 0.06) for y in (0.25, 0.75) for x in (0.1, 0.3, 0.5, 0.7, 0.9))
+_CHAIN1 = tuple(Cluster(x, 0.5, 0.08) for x in (0.1, 0.3, 0.5, 0.7, 0.9))
 GEOMETRIES = {
     "uniform": GeometrySpec(),                                          # the framework network
     "clusters4": GeometrySpec(clusters=_C4, background=0.3),            # 4 dense clusters, 30 % uniform background
@@ -140,4 +142,8 @@ GEOMETRIES = {
     "clusters4_b50": GeometrySpec(clusters=_C4, background=0.5),        # 1000 uniform + 4 x 250 clustered
     "clusters4_b60": GeometrySpec(clusters=_C4, background=0.6),        # 1200 uniform + 4 x 200
     "clusters4_b70": GeometrySpec(clusters=_C4, background=0.7),        # 1400 uniform + 4 x 150
+    # chains of 5 clusters from the left band to the right one (x = 0.1 ... 0.9): with 20 % background the current has
+    # to cross cluster after cluster (stages in series); with split_bands both percolate on 5 of 5 seeds
+    "cadenas2_b20": GeometrySpec(clusters=_CHAIN2, background=0.2),     # 2 chains (y = 0.25, 0.75), 160 wires/cluster
+    "cadena1_b20": GeometrySpec(clusters=_CHAIN1, background=0.2),      # 1 central chain (y = 0.5), 320 wires/cluster
 }
