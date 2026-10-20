@@ -135,4 +135,9 @@ GEOMETRIES = {
     "clusters_line": GeometrySpec(clusters=_LINE, background=0.3),      # 3 clusters on the line between the bands
     "aligned_x": GeometrySpec(angle_mu=0.0, angle_sigma=0.3),           # wires along x (+-17 deg)
     "aligned_y": GeometrySpec(angle_mu=np.pi / 2, angle_sigma=0.3),     # wires along y, across the band axis
+    # clusters4 with more uniform background: with split_bands, 30-40 % background percolates on 3 of 5 seeds,
+    # 50 % and more on 5 of 5 (docs/N12_GEOMETRY.md, section 8)
+    "clusters4_b50": GeometrySpec(clusters=_C4, background=0.5),        # 1000 uniform + 4 x 250 clustered
+    "clusters4_b60": GeometrySpec(clusters=_C4, background=0.6),        # 1200 uniform + 4 x 200
+    "clusters4_b70": GeometrySpec(clusters=_C4, background=0.7),        # 1400 uniform + 4 x 150
 }

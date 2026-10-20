@@ -1,0 +1,22 @@
+{
+ "uniform": {
+  "onset_V": 2.016,
+  "n_junctions": 5953,
+  "pad_wires_mean": 17.25
+ },
+ "clusters4_b50": {
+  "onset_V": 1.908,
+  "n_junctions": 9392,
+  "pad_wires_mean": 8.6875
+ },
+ "clusters4_b60": {
+  "onset_V": 1.746,
+  "n_junctions": 8313,
+  "pad_wires_mean": 10.375
+ },
+ "clusters4_b70": {
+  "onset_V": 1.923,
+  "n_junctions": 7105,
+  "pad_wires_mean": 12.25
+ }
+}
