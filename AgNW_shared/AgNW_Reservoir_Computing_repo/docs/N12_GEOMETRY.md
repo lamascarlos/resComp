@@ -117,6 +117,22 @@ python scripts/n12_geometry.py sweep --n-wires 3000 --only uniform,clusters4    
 
 `run` y `report` siguen usando 2000 hilos; el barrido completo en N todavía no está armado.
 
+### 2.3b Barrido de fondo de una geometría propia en una PC
+
+`scripts/n12_mi_geometria_fondo.py` es la versión de script de la notebook `resComp_mi_geometria_fondo.ipynb`. Con un
+número de hilos fijo y una geometría de clusters dada, varía la fracción de fondo uniforme y, para cada red, calcula
+el onset y corre la simulación corta (300 entradas, 1 red, ventana 1,25 × onset). Las redes se procesan en paralelo,
+una por núcleo. Los onsets se guardan en `results/n12_onsets_cache.json` (clave: layout, número de hilos y la
+geometría misma), así que no se recalculan. En una PC con Ubuntu:
+
+```bash
+curl -O https://raw.githubusercontent.com/lamascarlos/resComp/feature/geometria-substrato/AgNW_shared/AgNW_Reservoir_Computing_repo/cluster/run_mi_geometria_local.sh
+nohup bash run_mi_geometria_local.sh --n-wires 3000 --fondos 0.4,0.6,0.8,0.9 > mi_geometria.log 2>&1 &
+```
+
+Las salidas quedan en `results/n12_mi_geometria/<tag>/`: `resultados.json`, `resultados.csv`, `redes.png`,
+`puntajes.png`, `vs_fondo.png` y `memoria.png`.
+
 ### 2.4 Agregar una geometría nueva
 
 ```python
