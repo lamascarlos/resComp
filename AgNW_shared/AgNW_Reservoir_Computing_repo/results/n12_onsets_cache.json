@@ -1,0 +1,7 @@
+{
+ "pads|N3000|GeometrySpec(clusters=(), background=1.0, angle_mu=0.0, angle_sigma=0.0)": 0.267,
+ "pads|N3000|GeometrySpec(clusters=(Cluster(x=0.25, y=0.25, sigma=0.08, weight=1.0), Cluster(x=0.75, y=0.25, sigma=0.08, weight=1.0), Cluster(x=0.25, y=0.75, sigma=0.08, weight=1.0), Cluster(x=0.75, y=0.75, sigma=0.08, weight=1.0), Cluster(x=0.5, y=0.5, sigma=0.08, weight=1.0)), background=0.4, angle_mu=0.0, angle_sigma=0.0)": 0.339,
+ "pads|N3000|GeometrySpec(clusters=(Cluster(x=0.25, y=0.25, sigma=0.08, weight=1.0), Cluster(x=0.75, y=0.25, sigma=0.08, weight=1.0), Cluster(x=0.25, y=0.75, sigma=0.08, weight=1.0), Cluster(x=0.75, y=0.75, sigma=0.08, weight=1.0), Cluster(x=0.5, y=0.5, sigma=0.08, weight=1.0)), background=0.6, angle_mu=0.0, angle_sigma=0.0)": 0.267,
+ "pads|N3000|GeometrySpec(clusters=(Cluster(x=0.25, y=0.25, sigma=0.08, weight=1.0), Cluster(x=0.75, y=0.25, sigma=0.08, weight=1.0), Cluster(x=0.25, y=0.75, sigma=0.08, weight=1.0), Cluster(x=0.75, y=0.75, sigma=0.08, weight=1.0), Cluster(x=0.5, y=0.5, sigma=0.08, weight=1.0)), background=0.8, angle_mu=0.0, angle_sigma=0.0)": 0.339,
+ "pads|N3000|GeometrySpec(clusters=(Cluster(x=0.25, y=0.25, sigma=0.08, weight=1.0), Cluster(x=0.75, y=0.25, sigma=0.08, weight=1.0), Cluster(x=0.25, y=0.75, sigma=0.08, weight=1.0), Cluster(x=0.75, y=0.75, sigma=0.08, weight=1.0), Cluster(x=0.5, y=0.5, sigma=0.08, weight=1.0)), background=0.9, angle_mu=0.0, angle_sigma=0.0)": 0.342
+}

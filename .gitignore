@@ -1,0 +1,9 @@
+# Generados al instalar o correr el código
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+.pytest_cache/
+.venv/
+.ipynb_checkpoints/
+AgNW_shared/AgNW_Reservoir_Computing_repo/results/raw/
