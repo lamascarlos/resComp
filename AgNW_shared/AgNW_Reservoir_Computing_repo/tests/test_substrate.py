@@ -97,3 +97,25 @@ def test_simulate_multi_runs_on_a_clustered_network():
                      geometry="clusters4")
     raw = simulate_multi(spec, n_samples=5, washout_steps=40)
     assert raw["current"].shape == (5, 2 * 16) and np.all(np.isfinite(raw["current"]))
+
+
+def test_n_wires_default_keeps_the_working_network_and_names():
+    _same_network(C.make_network(1, n_wires=C.N_WIRES), C.make_network(1))
+    _same_network(C.make_network(3, n_wires=C.N_WIRES * 4, side=2.0), C.make_network(3, side=2.0))
+    base = dict(stream="iid", hold=1000, v_center=0.38, network_seed=1, model="volatile", layout="pads")
+    assert "_N" not in C.RunSpec(**base, geometry="clusters4").name
+    assert "_N3000" in C.RunSpec(**base, geometry="clusters4", n_wires=3000).name
+
+
+def test_n_wires_sets_the_wire_count_and_scales_the_clusters():
+    net = C.make_network(1, n_wires=3000, geometry="clusters4")
+    assert net.n_wires == 3000 and net.wire_endpoints.shape == (3000, 2, 2)
+    np.testing.assert_array_equal(cluster_counts(3000, GEOMETRIES["clusters4"]), [900, 525, 525, 525, 525])
+    assert len(net.junctions) > 1.8 * len(C.make_network(1, geometry="clusters4").junctions)   # ~ N^2
+
+
+def test_simulate_multi_uses_the_spec_wire_count():
+    kw = dict(stream="iid", hold=20, v_center=0.38, v_width=0.16, network_seed=1, n_samples=5, model="volatile",
+              layout="pads", tau_s=3.0, tau_spread=1.0, washout=40, n_virtual=2, stride=2, geometry="clusters4")
+    raw = simulate_multi(C.RunSpec(**kw, n_wires=1500), n_samples=5, washout_steps=40)
+    assert raw["n_junctions"] == len(C.make_network(1, n_wires=1500, geometry="clusters4").junctions)

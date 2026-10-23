@@ -35,14 +35,14 @@ def network_params(p_relax: float = P_RELAX) -> tuple[SimParams, float]:
     return dataclasses.replace(params, p_relax=p_relax), run_kwargs["wire_diameter"]
 
 
-def make_network(network_seed: int, n_wires: int = N_WIRES, side: float = 0.0, geometry: str = "") -> Network:
-    """The network geometry depends only on network_seed (as in build_setup). side > 0 (mm): a square of that side at
-    the same wire density (N10-L), N_WIRES x side^2 wires; side = 0 is the 1 mm working model. geometry: a name in
-    substrate.GEOMETRIES (N12: clustered centres, oriented wires); "" = the framework's uniform placement."""
-    if side:
-        n_wires, area = int(round(N_WIRES * side ** 2)), AREA * side ** 2
-    else:
-        area = AREA
+def make_network(network_seed: int, n_wires: int = 0, side: float = 0.0, geometry: str = "") -> Network:
+    """The network geometry depends only on network_seed (as in build_setup). side > 0 (mm): a square of that side;
+    side = 0 is the 1 mm working model. n_wires: number of wires; 0 = the working density, N_WIRES x side^2 (N_WIRES on
+    1 mm). geometry: a name in substrate.GEOMETRIES (N12: clustered centres, oriented wires); "" = the framework's
+    uniform placement."""
+    area = AREA * side ** 2 if side else AREA
+    if not n_wires:
+        n_wires = int(round(N_WIRES * side ** 2)) if side else N_WIRES
     if geometry:
         from .substrate import GEOMETRIES, build_network as build_custom
         return build_custom(n_wires, area, LENGTH, np.random.default_rng(network_seed), GEOMETRIES[geometry])
@@ -91,6 +91,7 @@ class RunSpec:
     p_c2: float = 0.0           # N10-K: consolidation power threshold override in W (0 = VolatileParams default 1e-6)
     side: float = 0.0           # N10-L: network side in mm at the working density (0 = the 1 mm working model)
     geometry: str = ""          # N12: wire placement, a name in substrate.GEOMETRIES ("" = framework uniform)
+    n_wires: int = 0            # N12: number of wires (0 = the working density: N_WIRES on 1 mm, N_WIRES x side^2)
 
     @property
     def washout_steps(self) -> int:
@@ -122,6 +123,7 @@ class RunSpec:
                 + (f"_{self.layout}_{self.encoding}" if self.layout else "")
                 + (f"_L{self.side:g}" if self.side else "")
                 + (f"_g{self.geometry}" if self.geometry else "")
+                + (f"_N{self.n_wires}" if self.n_wires else "")
                 + ("_fil" + (f"_sig{self.sigma:.0e}" if self.sigma else "") if self.model == "filament" else "")
                 + (f"_vol_ts{self.tau_s:g}_sp{self.tau_spread:g}" + ("_con" if self.consolidation else "")
                    + (f"_kc{self.k_c:g}" if self.k_c else "") + (f"_tl{self.tau_l:g}" if self.tau_l else "")

@@ -101,7 +101,23 @@ raw = simulate_multi(spec)
 | `aligned_x` | uniformes | μ = 0, σ = 0,3 rad (±17°) | hilos a lo largo del eje entre bandas |
 | `aligned_y` | uniformes | μ = π/2, σ = 0,3 rad | hilos perpendiculares a ese eje |
 
-### 2.3 Agregar una geometría nueva
+### 2.3 Número de hilos (`n_wires`)
+
+Por defecto la red tiene la densidad del modelo de trabajo: 2000 hilos en 1 mm² (`N_WIRES`). `RunSpec(n_wires=...)` y
+`make_network(seed, n_wires=...)` fijan otro número de hilos **en el mismo sustrato**, así que cambian la densidad. Los
+clusters se reparten en proporción (`cluster_counts`): con 30 % de fondo y 3000 hilos, 900 uniformes y 4 × 525. El
+nombre de la corrida suma `_N<n>` solo si se usa, y `n_wires=0` reproduce exactamente las redes anteriores (test).
+
+Con más hilos hay más junturas, que crecen como N², y el tiempo de simulación crece con ellas. La red conduce más fácil
+y el onset baja, así que hay que recalcularlo:
+
+```bash
+python scripts/n12_geometry.py sweep --n-wires 3000 --only uniform,clusters4      # -> results/n12_sweep_N3000.json
+```
+
+`run` y `report` siguen usando 2000 hilos; el barrido completo en N todavía no está armado.
+
+### 2.4 Agregar una geometría nueva
 
 ```python
 from agnw_rc.substrate import GEOMETRIES, GeometrySpec, Cluster

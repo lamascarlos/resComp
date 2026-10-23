@@ -73,7 +73,7 @@ def simulate_multi(spec: C.RunSpec, n_samples: int | None = None, washout_steps:
         raise ValueError("simulate_multi needs spec.layout")
     t0 = time.time()
     params, wd = C.network_params(spec.p_relax)
-    network = C.make_network(spec.network_seed, side=spec.side, geometry=spec.geometry)
+    network = C.make_network(spec.network_seed, n_wires=spec.n_wires, side=spec.side, geometry=spec.geometry)
     electrodes = make_layout(spec.layout, network)
     circuit = MultiTerminalCircuit(network, wd, electrodes)
     fixed = circuit.fixed_electrodes

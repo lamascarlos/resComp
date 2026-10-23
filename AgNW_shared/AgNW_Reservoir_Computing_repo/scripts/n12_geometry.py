@@ -18,7 +18,8 @@
 
     python scripts/n12_geometry.py stats [--only clusters4,aligned_x] [--seeds 1,2,3]
     python scripts/n12_geometry.py figure
-    python scripts/n12_geometry.py sweep [--only ...] [--procs N] [--layout split_bands]   (-> n12_sweep_<layout>.json)
+    python scripts/n12_geometry.py sweep [--only ...] [--procs N] [--layout split_bands] [--n-wires 3000]
+                                                                     (-> n12_sweep[_<layout>][_N<n>].json)
     python scripts/n12_geometry.py run [--only ...] [--procs N] [--share i/n]
     python scripts/n12_geometry.py report [--only ...]
 """
@@ -108,17 +109,21 @@ def figure(names):
 
 
 # ------------------------------------------------------------------ onset per geometry (as n10l_size.sweep_one)
-def sweep_path(layout=LAYOUT):
-    """Onsets per geometry: results/n12_sweep.json for the pads (the run/report layout), n12_sweep_<layout>.json else."""
-    return SWEEP if layout == LAYOUT else SWEEP.with_name(f"n12_sweep_{layout}.json")
+def sweep_path(layout=LAYOUT, n_wires=0):
+    """Onsets per geometry: results/n12_sweep.json for the pads at 2000 wires (the run/report setting), else
+    n12_sweep[_<layout>][_N<n_wires>].json."""
+    if layout == LAYOUT and not n_wires:
+        return SWEEP
+    return SWEEP.with_name("n12_sweep" + (f"_{layout}" if layout != LAYOUT else "")
+                           + (f"_N{n_wires}" if n_wires else "") + ".json")
 
 
-def sweep_one(name, layout=LAYOUT):
+def sweep_one(name, layout=LAYOUT, n_wires=0):
     from agnw_rc.multicircuit import MultiTerminalCircuit
     from agnw_rc.volatile import conductance, junction_kd0, step_state
     vp = C.volatile_params(None, tau_s=TAU, tau_spread=SPREAD, dt=C.DT)
     _, wd = C.network_params()
-    net = C.make_network(1, geometry=name)
+    net = C.make_network(1, n_wires=n_wires, geometry=name)
     els = make_layout(layout, net)
     mc = MultiTerminalCircuit(net, wd, els)
     fixed = mc.fixed_electrodes
@@ -143,13 +148,13 @@ def sweep_one(name, layout=LAYOUT):
                   "pad_wires_mean": float(np.mean([len(e.wires) for e in els]))}
 
 
-def sweep(names, procs, layout=LAYOUT):
-    path = sweep_path(layout)
+def sweep(names, procs, layout=LAYOUT, n_wires=0):
+    path = sweep_path(layout, n_wires)
     res = json.loads(path.read_text()) if path.exists() else {}
     todo = [n for n in names if n not in res]
     if todo:
         with ProcessPoolExecutor(max(1, min(procs, len(todo)))) as pool:
-            for name, r in pool.map(sweep_one, todo, [layout] * len(todo)):
+            for name, r in pool.map(sweep_one, todo, [layout] * len(todo), [n_wires] * len(todo)):
                 res[name] = r
                 print(name, r, flush=True)
                 path.write_text(json.dumps(res, indent=1))
@@ -278,6 +283,7 @@ def main():
     ap.add_argument("--seeds", default="1,2,3")
     ap.add_argument("--procs", type=int, default=4)
     ap.add_argument("--layout", default=LAYOUT, help="electrode layout for sweep (run/report use the pads)")
+    ap.add_argument("--n-wires", type=int, default=0, help="number of wires for sweep (0 = 2000, the working density)")
     ap.add_argument("--share", default="", help="i/n: only runs with index %% n == i (split between machines)")
     a = ap.parse_args()
     names = a.only.split(",") if a.only else (list(GEOMETRIES) if a.cmd in ("stats", "figure") else RC_GEOMETRIES)
@@ -289,7 +295,7 @@ def main():
     elif a.cmd == "figure":
         figure(names)
     elif a.cmd == "sweep":
-        sweep(names, a.procs, a.layout)
+        sweep(names, a.procs, a.layout, a.n_wires)
     elif a.cmd == "run":
         run(names, a.procs, a.share)
     else:
