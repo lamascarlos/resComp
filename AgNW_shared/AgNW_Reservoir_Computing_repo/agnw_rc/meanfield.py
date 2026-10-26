@@ -87,7 +87,7 @@ def simulate_meanfield(spec: C.RunSpec, n_samples: int | None = None, washout_st
     continuous P_j (stored as float16 in 'junction_p'); replicates differ only in the pre-drive."""
     t0 = time.time()
     params, wire_diameter = C.network_params(spec.p_relax)
-    network = C.make_network(spec.network_seed)
+    network = C.make_network(spec.network_seed, n_wires=spec.n_wires, geometry=spec.geometry)
     circuit = DualNodeCircuit(network, wire_diameter)
     solver = MeanFieldSolver(circuit)
     u, labels = input_stream(spec)

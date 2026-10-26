@@ -44,6 +44,9 @@ Regenerate all figures: `.venv/bin/python scripts/make_figures.py`. One figure: 
 | figN4_3_architecture | where the junction model sits in the simulation pipeline | `scripts/n4_model_figures.py:fig_architecture` | schematic | none |
 | figN4_4_calibration | N4 calibration to Lamas Fig. 4: loss map, calibrated point vs paper (N = 2000 fitted, 3000 not), I-V loop | `fig_n4_calibration` | `results/n4_calibration.json`, `results/n4_calib/*.npz`, framework trace | `scripts/n4_calibrate.py grid/grid2/refine/validate` |
 | figS1_meanfield_onset | stochastic vs mean-field quasi-static onset | `fig_onset` | `results/pilot.npz`, `results/meanfield_pilot.npz` | `scripts/pilot.py`, `scripts/meanfield_pilot.py` |
+| fig36_n12_geometries | N12: networks of seed 1 for every geometry in `substrate.GEOMETRIES` (clusters, oriented wires) with the 4x4 pads and the 2-sigma cluster circles | `scripts/n12_geometry.py figure` | none (geometry only) | `agnw_rc/substrate.py` |
+| fig38_n12_colab_scores | N12 preliminary (Colab, 1 network, 300 inputs, one window): MC, degree-2, NARMA-10 for uniform / clusters4 / aligned_x and input only | notebook `resComp_geometrias.ipynb`, section 4 | none saved (notebook outputs) | `agnw_rc/substrate.py`, `multidrive.simulate_multi` |
+| fig39_n12_colab_memory | N12 preliminary (Colab): memory function C_k vs lag for the same runs | notebook `resComp_geometrias.ipynb`, section 4 | none saved (notebook outputs) | idem |
 
 Full pipeline, in order: `pilot.py`, `meanfield_pilot.py`, `multi_pilot.py`, `run_sims.py {e1,e2,e3,m1,n2,n7a,n7b,n5a}`, `noise_averaging.py`, `evaluate_all.py`,
 `effective_dimension.py`, `leaky_bank_reference.py`, `make_figures.py`. The tables in docs/RESULTS.md section 8 come
